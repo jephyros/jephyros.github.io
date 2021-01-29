@@ -1,31 +1,29 @@
 ---
 layout: post
-title:  디자인패턴(템플릿)
+title:  템플릿 메서드 패턴
 date:   2021-01-28 10:11:50 +0900
 img: 8.jpg
-tags: [Inspiration, Music, Tips, Guitar]
+tags: [Design Pattern, 디자인패턴, Java,Template Method Pattern]
 ---
-템플릿 패턴이란 
+템플릿 메서드 패턴이란 "소프트웨어 공학에서 동작 상의 알고리즘의 프로그램 뼈대를 정의하는 행위 디자인 패턴이다. 알고리즘의 구조를 변경하지 않고 알고리즘의 특정 단계들을 다시 정의할 수 있게 해준다." 라고 위키백과에서 정의하고있다.
+##### 좀더 개발자스럽게 표현한다면 다음과 같다. 
+* 메소드에서 알고리즘의 골격을 정의한다.
+* 알고리즘의 여러 단계 중, 일부는 서브클래스에서 구현할 수 있다.
+* 알고리즘의 구조는 그대로 유지하면서 서브클래스에서 특정 단계를 재정의 할 수 있다.
+
+자바를 공부하면 누구나 배우는 추상클래스를 가지고 클래스의 상속, 오버라이드등의 기본기능을 좀더 고급스럽게 사용한다는 느낌이다.
+
+내가 처음 템플릿 메서드 패턴을 접한것은 어느 책인지는 기억이 잘 안나지만 내용은 JDBC를 통해 SQL에 접속하여 데이터를 가저오는 코드를 리팩토링하는 과정에서 이러한 중복 코드를 템플릿 메서드 패턴을 사용하여 리팩토링 한다는 내용이였다.
+
+
+
+
+
+
+
 
 <script src="https://gist.github.com/jephyros/0c5ff279b10f4609aae99048e9e14050.js"></script>
 
-Literally lomo blue bottle pabst retro snackwave brooklyn taiyaki bitters. Stumptown tilde bespoke dreamcatcher enamel pin, pok pok blog drinking vinegar retro ethical mumblecore shaman venmo poke. Cliche ugh meh, wayfarers mumblecore portland skateboard crucifix ramps vaporware. Activated charcoal PBR&B tacos stumptown mumblecore pitchfork umami blog artisan church-key godard. Shabby chic meh lyft, tilde pork belly echo park +1 tote bag tofu. Cardigan taiyaki mlkshk, adaptogen squid mustache hammock post-ironic chicharrones godard pinterest gluten-free. Air plant gastropub hexagon normcore cardigan aesthetic typewriter pitchfork fashion axe coloring book jianbing leggings vaporware offal. Bushwick palo santo leggings four dollar toast truffaut gluten-free. Fashion axe lo-fi vexillologist kinfolk. Authentic sriracha affogato, tofu polaroid enamel pin poke. Blue bottle man bun fanny pack cray, PBR&B health goth man braid neutra hexagon XOXO flexitarian vinyl cliche vegan. Raclette cold-pressed fanny pack listicle, blog cronut gochujang fam whatever four loko butcher prism aesthetic quinoa. Raclette thundercats gluten-free tbh, ethical adaptogen keffiyeh fam. Swag distillery pop-up offal. Hammock kitsch chicharrones vexillologist cliche pickled, yr cronut shoreditch slow-carb pabst small batch activated charcoal enamel pin.
-
-Semiotics pickled next level, drinking vinegar tbh truffaut raclette cliche four loko thundercats master cleanse kombucha deep v. Enamel pin authentic sartorial, bitters paleo taiyaki vegan salvia. Sriracha knausgaard deep v, irony ramps hammock YOLO raclette. Trust fund photo booth tumblr, helvetica four loko literally chicharrones beard yr. Cronut PBR&B XOXO palo santo tbh craft beer, crucifix tumblr. Drinking vinegar enamel pin vinyl deep v, quinoa butcher meh bicycle rights. Jianbing neutra iceland salvia ennui. Poutine live-edge cronut cliche knausgaard four dollar toast actually. Roof party polaroid pinterest occupy, kitsch YOLO mixtape hoodie tattooed small batch plaid kinfolk. Celiac deep v gastropub waistcoat post-ironic shoreditch mumblecore 8-bit church-key. Try-hard PBR&B aesthetic quinoa, trust fund lomo poke. Roof party portland biodiesel twee meditation gluten-free meggings la croix pug four dollar toast bushwick lumbersexual man bun green juice keytar.
-
-### You need a little dummy text
-
-1. Wayfarers air plant tousled gluten-free synth.
-2. Tumeric taxidermy iPhone, thundercats lo-fi you.
-3. Heard of them deep v art party raclette irony cred vegan tattooed.
-4. Migas four loko tumblr literally subway tile occupy vape.
-5. Fixie copper mug beard, scenester normcore vape.
-
-Humblebrag sartorial copper mug offal yr crucifix. Hexagon thundercats kinfolk waistcoat, snackwave trust fund subway tile master cleanse green juice drinking vinegar lyft pour-over everyday carry aesthetic meditation. Gochujang jean shorts plaid vinyl man braid. Hell of YOLO quinoa kombucha ethical. Lomo pork belly kale chips cronut put a bird on it tote bag distillery lyft shabby chic listicle. Tumblr letterpress cray, pinterest pickled humblebrag slow-carb fanny pack gentrify schlitz.
-
-Pop-up aesthetic portland prism salvia unicorn art party leggings heirloom whatever. Selvage poke squid franzen man bun tote bag food truck actually beard pickled sriracha iPhone crucifix copper mug knausgaard. Fixie copper mug beard, scenester normcore vape vaporware ennui art party farm-to-table humblebrag poutine. Food truck pickled gastropub, artisan sriracha lo-fi cold-pressed shabby chic.
-
-Hell of letterpress gentrify single-origin coffee pork belly. Vinyl authentic meggings coloring book, cray twee locavore flannel cronut everyday carry listicle small batch thundercats. 3 wolf moon before they sold out brunch selvage. Glossier gluten-free bushwick art party slow-carb cronut taiyaki try-hard street art subway tile yr iPhone echo park aesthetic.
 
 ![Flower and water]({{site.baseurl}}/images/pages/18.jpg)
 
