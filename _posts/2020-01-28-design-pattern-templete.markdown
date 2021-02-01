@@ -24,6 +24,9 @@ tags: [Design Pattern, 디자인패턴, Java,Template Method Pattern]
 내용은 간단하다. 추상클래스에 는 3개의 메서드가 존재하는데 상속가능한 primitive1(), primitive2() 2개의 메서드와 상속 불가한 templateMethod()가 존재한다.
 templageMethod()메서드는 primitive1(),primitive2() 를 사용해서 알고리즘(수행순서,제약 등.) 이 정의되어있고 이 알고리즘은 변하지않고 primitive1(),primitive2()는 구현 하는 서브클래스에 맞겨놓는 방식이다. 그렇지만 너무 이 내용에 집착(?)하면 명확한 알고리즘 순서가 있을때 템플릿 메소드 패턴을 사용한다고 오해(제한) 할 수 있음을 주의하라는 글을 본적있다.
 즉, <strong> 단지 관심사를 분리하거나 코드중복을 줄이거나 혹은 전 처리나 후 처리등을 위해서 사용하는 경우도 많이 볼 수 있다.</strong>
+또한, 처리흐름이 있더라도 처리흐름을 따로 분리해서 메서드를 만드는 경우도 많지 않다.
+예를 들어 스프링의 AbstractHandlerMethodExceptionResolver 의 doResolveException 메서드에서 doResolveHandlerMethodException 추상메서드를 호출하는데 호출하는이유가 단지 형변한을 위한 전처리를 작업을 위해 템플릿 메서드 패턴을 사용했다.
+
 #### 템플릿 메서드 패턴 설명에 나오는 전형적인 예시들.
 ##### 차끓이기 
 1. 물을 붓는다.
@@ -42,7 +45,7 @@ templageMethod()메서드는 primitive1(),primitive2() 를 사용해서 알고�
 4. ...
 
 
-##### <Strong> 그럼 템플릿 메서드 패턴은 Java Spring 의 어디에서 어떻게 사용되고있을까?</Strong>
+##### <Strong> 그럼 템플릿 메서드 패턴은 스프리의 어디에서 어떻게 사용되고있는지 좀더 찾아보자</Strong>
 * java.io.InputStream 의 read() 메서드
 {% highlight js %}
     public abstract int read() throws IOException;  // 서브클래스에 구현 위임 
