@@ -2,7 +2,7 @@
 layout: post
 title:  전략 패턴
 date:   2020-01-28 10:11:50 +0900
-img: 8.jpg
+img: 5.jpg
 tags: [Design Pattern, 디자인패턴, Java,Strategy Pattern]
 ---
 전략 패턴이란 "실행 중에 알고리즘을 선택할 수 있게 하는 행위 소프트웨어 디자인 패턴이다" 라고 위키백과에서 정의하고있다.
