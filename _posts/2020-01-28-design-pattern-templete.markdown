@@ -76,7 +76,30 @@ templageMethod()메서드는 primitive1(),primitive2() 를 사용해서 알고�
         return i;
     }  
 {% endhighlight %}
-* java.util.Collections의 sort() 메서드
+* java.util.Collections의 sort() - 추상클래스가 아닌 Interface 의 Default Method 방식
+{% highlight js %}
+    public static <T> void sort(List<T> list, Comparator<? super T> c) {
+        list.sort(c);
+    }
+
+    //List 인터페이스의 default Method 는 listIterator() 를 호출함
+    // 이부 분은 다른 구현클래스(ex. ArraysList 등 )에서 정의됨
+    public interface List<E> extends Collection<E> {
+        .....
+        default void sort(Comparator<? super E> c) {
+            Object[] a = this.toArray();
+            Arrays.sort(a, (Comparator) c);
+            ListIterator<E> i = this.listIterator();
+            //listIterator 를 호출함
+            for (Object e : a) {
+                i.next();
+                i.set((E) e);
+            }
+        }
+        .....
+    }
+{% endhighlight %}
+
 
 
 
