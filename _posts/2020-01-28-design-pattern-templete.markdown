@@ -16,7 +16,7 @@ tags: [Design Pattern, 디자인패턴, Java,Template Method Pattern]
 내가 처음 템플릿 메서드 패턴을 접한것은 어느 책인지는 기억이 잘 안나지만 내용은 JDBC를 통해 SQL에 접속하여 데이터를 가저오는 코드를 리팩토링하는 과정에서 이러한 중복 코드를 템플릿 메서드 패턴을 사용하여 리팩토링 한다는 내용이였다.
 
 
-아래 그림은 템플릿 메서드 패턴에대한 UML이다. 
+아래 그림은 템플릿 메서드 패턴에 대한 UML이다. 
 ![Template Method design pattern.]({{site.baseurl}}/images/pages/20200128/templatemethodpattern_01.jpg)
 
 < 출처:위키백과(https://ko.wikipedia.org) >
@@ -26,6 +26,12 @@ templageMethod()메서드는 primitive1(),primitive2() 를 사용해서 알고�
 즉, <strong> 단지 관심사를 분리하거나 코드중복을 줄이거나 혹은 전 처리나 후 처리등을 위해서 사용하는 경우도 많이 볼 수 있다.</strong>
 또한, 처리흐름이 있더라도 처리흐름을 따로 분리해서 메서드를 만드는 경우도 많지 않다.
 예를 들어 스프링의 AbstractHandlerMethodExceptionResolver 의 doResolveException 메서드에서 doResolveHandlerMethodException 추상메서드를 호출하는데 호출하는이유가 단지 형변한을 위한 전처리를 작업을 위해 템플릿 메서드 패턴을 사용했다.
+
+디자인 패턴을 공부하다보면 <strong>"헐리우드 원칙"</strong> 이라는 용어가 등장한다.
+> 먼저 연락하지 마세요. 저희가 연락 드리겠습니다. - 헐리우드 원칙
+
+의존성 부패(dependency rot)를 방지하기 위한 디자인 패턴 원칙이고 템플릿 메서드에도 적용 된다. 즉, "구현 클래스에 메서드를 구현하면 그 사용(호출)은 추상클래스의 메서드에서 알아서 할테니 신경(접근불가)쓰지마" 이런 느낌?.
+
 
 #### 템플릿 메서드 패턴 설명에 나오는 전형적인 예시들.
 ##### 차끓이기 
