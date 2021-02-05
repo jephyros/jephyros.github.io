@@ -48,5 +48,9 @@ tags: [Design Pattern, 디자인패턴, Java,Strategy Pattern]
 구현과 인터페이스를 분리하는 것이 낫다.
 
 
+##### <strong> 전략 패턴 vs 상태 패턴
+
+...블라블라
+
 
 
