@@ -10,7 +10,6 @@ tags: [Design Pattern, 디자인패턴, Java,Delegation Pattern]
 
 ##### 자바스크립트의 이벤트 델리게이션 패턴
 자바스크립트에서 퍼포먼스를 높이는데 있어서 굉장히 중요한역할을 차지하고있다.
-예들들어
 {% highlight html %}
     <div id="wapper">
         <div id="btn1"> btn1 </div>
@@ -20,7 +19,7 @@ tags: [Design Pattern, 디자인패턴, Java,Delegation Pattern]
         <div id="btn5"> btn5 </div>
     </div>
 {% endhighlight js %}    
-위와 같은 구조에서 버튼 1~5 까지 이벤트 리스너를 줄 경우 각 버튼마다 줄수있다.
+예들들어 위와 같은 구조에서 버튼 1~5 까지 이벤트 리스너를 줄 경우 아래처럼 각 버튼마다 주는 방법이있다.
 {% highlight js %}
     document.getElmentById('btn1').addEventListener('click',funciton(){
         console.log('btn1 click')
@@ -30,11 +29,9 @@ tags: [Design Pattern, 디자인패턴, Java,Delegation Pattern]
     });
     ....    
 {% endhighlight js %}    
-이런 DOM Element가 많아지거나 DOM Element가 동적으로 변하는 상활이라면 이런식으로 일일이 리스너를 등록하는 방식은 브라우저의 메로리 부족과 낮은 퍼포먼스를 야기하게 될 것이다. 
+하지만 이런 DOM Element가 많아지거나 DOM Element가 동적으로 변하는 상황이라면 위와같이 하나하나 리스너를 등록하는 방식은 브라우저의 메모리 부족과 낮은 퍼포먼스를 야기하게 될 것이다. 
 이를 해결하기위해 권장하는 패턴이 바로 이벤트 델리게이션 패턴이다.
-즉, 버튼에 일일이 이벤트 리스너를 등록하지 말고, 그번튼을 감사고 있는 Parent Wrapper Div 에 이벤트리스너를 등록해서, 그 이벤트의 target값을 이용해서 해당 버튼의 클릭 이벤트를 핸들하는 것이다.
-
-위의 이벤트는 아래와 같은 코드로 변경될수있다.
+즉, 버튼에 개별적으로 이벤트 리스너를 등록하지 말고, 그 버튼을 감싸고 있는 Parent Wrapper Div 에 이벤트 리스너를 등록하여, 그 이벤트의 Target 값을 이용해 해당 버튼의 클릭 이벤트를 핸들링하는 것이다.
 {% highlight js %}
     document.getElementByid('wrapper').addEventListerner('click',function(e){
         var target = e.target || e.srcElement;
@@ -54,7 +51,7 @@ tags: [Design Pattern, 디자인패턴, Java,Delegation Pattern]
         e.stopPropagation();
     },true )
 {% endhighlight js %}    
-
+이벤트 델리게이션 패턴을 사용하면 위와 같이 변경될 수 있다.
 
 
 
