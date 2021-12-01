@@ -27,9 +27,9 @@ if(screens.Length>1)
 {% endhighlight %}
 
 
-> 웹페이지에서 Javascript 로 c# 의 함수를 콜하여 제어 하는 방업
+> 웹페이지에서 Javascript 로 c# 의 함수를 호출하여 제어 하는 방법
 
-###### Form 이 로드될 경우 아래처럼 Javascript Event 호출 활성화 및  웹페이지에서 호출할 객체명(cAPI)를 구성해준다.
+###### Form 이 로드될 경우 아래처럼 Javascript Event 호출을 활성화 하고 웹페이지에서 호출할 객체명(cAPI)을 등록해준다.
 
 {% highlight c# %}
 // c# Form initialize 부분
@@ -37,7 +37,7 @@ chrome.JavascriptObjectRepository.Settings.LegacyBindingEnabled = true;
 chrome.JavascriptObjectRepository.Register("cAPI", new SignAPI(secondForm), false, BindingOptions.DefaultBinder);
 {% endhighlight %}
 
-###### internal class로 아래처럼 호출하는 Class를생성한다. 아래 예제는 두번째창을 제어하기위해 Form2변수를 선언해놓은후 생성자를 통해 변수를 받아서 함수에서 호출 할 수 있도록 하였다.
+###### internal Class로  아래처럼 호출하는 Class를 구성한다. 아래 예제는 두번째창을 제어하기 위해 Form2객체를 선언했으며 생서자를 통해 객체를 참조 받아서 내부 함수에서 호출 할 수 있도록 하였다.
 {% highlight c# %}
 internal class SignAPI 
 {
@@ -54,7 +54,7 @@ internal class SignAPI
 }
 {% endhighlight %}
 
-###### 웹페이지에서는 아래처럼 호출 할 수있다.
+###### 최종적으로 웹페이지에서는 아래처럼 호출 할 수있다.
 {% highlight js %}
 // call.html 의 javascript
 function callTest(){
