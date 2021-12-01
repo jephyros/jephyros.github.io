@@ -6,12 +6,12 @@ url: "https://jephyros.github.io/" # the base hostname & protocol for your site,
 
 # Banner Section
 hero: 112.jpg
-hero-title: Welcome to Jephyros
-hero-description: A Responsive Jekyll Blog Theme. Theme suitable for any kind of creators.
+hero-title: Welcome to J's Blog
+hero-description: I'm going to leave my tech record.
 
 # Author - Creator
 author-name: InSeok
-author-image: 10.jpg
+author-image: profile.jpg
 about-author: My name is InSeok. I'm a programer. I'm hmm..
 author-email: kr.chis@gmail.com
 author-twitter: https://twitter.com/
