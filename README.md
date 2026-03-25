@@ -16,9 +16,6 @@
 * 빠르고 정확한 실시간 코드 인식 기능을 제공합니다.
 * 13가지 이상의 전 세계 표준 형식을 지원하며, 직관적인 피드백을 제공합니다.
 
-#### **2. [여기에 다음 앱 이름을 적으세요]**
-* 앱에 대한 간단한 설명을 이곳에 추가하세요.
-* 지속적으로 편리한 도구 앱들을 업데이트할 예정입니다.
 
 ---
 
@@ -39,9 +36,7 @@ Thank you for using our applications. If you have any questions, suggestions, or
 * Provides fast and accurate real-time code recognition.
 * Supports 13+ global standard formats with intuitive visual/audio feedback.
 
-#### **2. [Next App Name Here]**
-* Add a brief description of your next app here.
-* We are committed to developing more useful tools for you.
+
 
 ---
 [Privacy Policy (개인정보 처리방침)](./) | © 2026 BRAD CHOI
