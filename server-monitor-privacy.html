@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Server Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0f172a;        /* Slate 900 */
+            --card-bg: #1e293b;         /* Slate 800 */
+            --accent-blue: #38bdf8;     /* Sky 400 */
+            --text-primary: #f8fafc;    /* Slate 50 */
+            --text-secondary: #94a3b8;  /* Slate 400 */
+            --border-color: #334155;    /* Slate 700 */
+            --success-green: #10b981;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+            word-break: keep-all;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 80px 24px;
+        }
+
+        /* --- Header Section --- */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .app-logo {
+            background: var(--card-bg);
+            width: 80px;
+            height: 80px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            border: 1px solid var(--border-color);
+            color: var(--accent-blue);
+            font-size: 40px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin: 0 0 8px;
+            letter-spacing: -0.02em;
+        }
+
+        .last-updated {
+            color: var(--text-secondary);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* --- Content Layout --- */
+        .policy-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 48px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px;
+            color: var(--accent-blue);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 24px;
+            background: var(--accent-blue);
+            border-radius: 2px;
+        }
+
+        p { margin-bottom: 20px; color: #cbd5e1; }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+
+        li {
+            padding-left: 28px;
+            position: relative;
+            margin-bottom: 12px;
+            color: #cbd5e1;
+        }
+
+        li::before {
+            content: "\f058"; /* FontAwesome check-circle */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--success-green);
+        }
+
+        .highlight-box {
+            background: rgba(56, 189, 248, 0.1);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 24px;
+            border-radius: 16px;
+            margin: 24px 0;
+        }
+
+        .contact-info {
+            background: #0f172a;
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        /* --- Language Divider --- */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--border-color), transparent);
+            margin: 80px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding-bottom: 60px;
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        footer a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            margin: 0 12px;
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 640px) {
+            .policy-card { padding: 32px 20px; }
+            h1 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    
+    <section id="ko">
+        <header>
+            <div class="app-logo"><i class="fa-solid fa-server"></i></div>
+            <h1>개인정보처리방침</h1>
+            <p class="last-updated">최종 수정: 2026-03-03</p>
+        </header>
+
+        <div class="policy-card">
+            <div class="highlight-box">
+                <p style="margin:0; font-weight: 600; color: var(--text-primary);">
+                    "Server Monitor는 사용자의 프라이버시를 최우선으로 하며, 어떠한 데이터도 외부 서버로 전송하지 않는 로컬 기반 모니터링 솔루션입니다."
+                </p>
+            </div>
+
+            <h2>개요</h2>
+            <p><strong>Server Monitor</strong>(이하 "앱")는 사용자가 등록한 서버 및 API의 상태를 모니터링하는 iOS 애플리케이션입니다. 본 앱은 사용자의 개인정보를 수집하거나 외부 서버로 전송하지 않습니다. 모든 데이터는 사용자의 기기 내부에만 저장됩니다.</p>
+
+            <h2>수집하는 정보</h2>
+            <p>앱은 다음 정보를 사용자의 기기 내부 저장소에만 저장하며, 이는 서비스 제공을 위한 필수 데이터입니다.</p>
+            <ul>
+                <li>사용자가 직접 입력한 서버 이름, URL, HTTP 메서드</li>
+                <li>인증 정보 (Bearer Token, API Key 등) — 암호화되어 기기 내부에 보관됩니다</li>
+                <li>체크 주기, 성공 조건 등 앱 설정값</li>
+                <li>마지막 서버 체크 결과 (상태 코드, 응답 시간 등)</li>
+            </ul>
+            <p>앱은 광고 식별자(IDFA), 위치 정보, 연락처 등 민감한 개인정보를 수집하지 않습니다.</p>
+
+            <h2>네트워크 요청</h2>
+            <ul>
+                <li><strong>서버 상태 체크:</strong> 사용자가 등록한 URL에만 HTTP 요청을 보냅니다. 결과는 기기 내부에만 저장됩니다.</li>
+                <li><strong>공인 IP 조회:</strong> IP 제한 기능 사용 시 api.ipify.org에 현재 공인 IP를 조회하며, 조회용 주소 외 어떤 데이터도 전송하지 않습니다.</li>
+            </ul>
+
+            <h2>푸시 알림</h2>
+            <p>서버 이상 감지 시 Push 알림을 발송합니다. Apple 알림 서비스(APNs)를 통해 전달되며, 알림 내용(서버명, 상태)만 포함됩니다. 알림 권한은 기기 설정에서 언제든지 관리할 수 있습니다.</p>
+
+            <h2>문의처</h2>
+            <div class="contact-info">
+                <p style="margin:0;"><strong>Brad Choi</strong> / 개발자</p>
+                <p style="margin:0;">Email: <a href="mailto:kr.chis@gmail.com" style="color:var(--accent-blue);">kr.chis@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="en">
+        <header>
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: 2026-03-03</p>
+        </header>
+
+        <div class="policy-card">
+            <div class="highlight-box">
+                <p style="margin:0; font-weight: 600; color: var(--text-primary);">
+                    "Server Monitor is a local-first monitoring solution that prioritizes your privacy. No data is ever transmitted to external servers."
+                </p>
+            </div>
+
+            <h2>Overview</h2>
+            <p><strong>Server Monitor</strong> ("the App") is an iOS application for monitoring servers and APIs. The App does not collect personal information or transmit any data to external servers. All data is stored exclusively on the user's device.</p>
+
+            <h2>Information We Store</h2>
+            <p>The App stores the following information only in the device's local storage:</p>
+            <ul>
+                <li>Server names, URLs, and HTTP methods entered by the user</li>
+                <li>Authentication credentials (Bearer Token, API Key, etc.)</li>
+                <li>App settings such as check intervals and success conditions</li>
+                <li>Last server check results (status code, response time)</li>
+            </ul>
+
+            <h2>Network Requests</h2>
+            <ul>
+                <li><strong>Server health checks:</strong> HTTP requests are sent only to URLs registered by the user.</li>
+                <li><strong>Public IP lookup:</strong> When using IP restrictions, the App queries api.ipify.org for the current public IP address.</li>
+            </ul>
+
+            <h2>Push Notifications</h2>
+            <p>Notifications are delivered via Apple Push Notification service (APNs) and contain only the server name and status. Permissions can be revoked at any time in device settings.</p>
+
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p style="margin:0;"><strong>Brad Choi</strong> / Developer</p>
+                <p style="margin:0;">Email: <a href="mailto:kr.chis@gmail.com" style="color:var(--accent-blue);">kr.chis@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 BRAD CHOI. All rights reserved.</p>
+        <div style="margin-top:10px;">
+            <a href="support.html">Support</a> | 
+            <a href="#ko">Korean</a> | 
+            <a href="#en">English</a>
+        </div>
+    </footer>
+</div>
+
+</body>
+</html>
