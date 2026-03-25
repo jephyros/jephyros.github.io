@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Remember English Card</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #2c3e50;
+            --text-muted: #586069;
+            --border-color: #e1e4e8;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #000;
+        }
+
+        .dev-info {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-top: 0;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 25px;
+            color: var(--primary-color);
+        }
+
+        .contact-box {
+            background: #eef6ff;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .email-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            display: block;
+            color: #333;
+        }
+
+        .feature-desc {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            text-align: left;
+        }
+
+        th {
+            background-color: #f1f3f5;
+        }
+
+        .faq-item {
+            margin-bottom: 25px;
+        }
+
+        .faq-q {
+            font-weight: bold;
+            color: #d63031;
+            margin-bottom: 8px;
+        }
+
+        .faq-a {
+            padding-left: 15px;
+            border-left: 3px solid #dfe6e9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: var(--border-color);
+            margin: 40px 0;
+        }
+
+        @media (max-width: 600px) {
+            .container { margin: 20px auto; }
+            h1 { font-size: 1.8rem; }
+            section { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Remember English Card</h1>
+        <div class="dev-info">
+            Support & Information<br>
+            <strong>Developer:</strong> Brad Choi
+        </div>
+    </header>
+
+    <section>
+        <h2>Contact / 문의</h2>
+        <p>For any questions, bug reports, or feedback, please email us.<br>
+        문의사항, 버그 신고, 피드백은 아래 이메일로 연락해 주세요.</p>
+        <div class="contact-box">
+            📧 <a href="mailto:kr.chis@gmail.com" class="email-link">kr.chis@gmail.com</a>
+        </div>
+        <p style="text-align: center; font-size: 0.9rem; color: var(--text-muted); margin-top: 15px;">
+            We aim to respond within 2 business days. / 영업일 기준 2일 이내에 답변 드립니다.
+        </p>
+    </section>
+
+    <section>
+        <h2>About the App / 앱 소개</h2>
+        <p><strong>Remember English Card</strong> is a smart English vocabulary app that creates flashcards from photos using on-device OCR. Powered by the SM-2 spaced repetition algorithm, it schedules reviews at the optimal time so you never forget a word.</p>
+        <p><strong>Remember English Card</strong>는 카메라로 촬영한 교재나 노트에서 OCR로 단어를 추출해 플래시카드를 자동 생성하는 영단어 암기 앱입니다. SM-2 간격 반복 알고리즘으로 최적의 복습 타이밍을 자동 스케줄링합니다.</p>
+
+        <h3>Key Features / 주요 기능</h3>
+        <ul class="feature-list">
+            <li>
+                <span class="feature-title">Smart Scan / 스마트 스캔</span>
+                <span class="feature-desc">Camera OCR creates cards instantly, works fully offline / 카메라 OCR로 카드 자동 생성, 완전 오프라인 동작</span>
+            </li>
+            <li>
+                <span class="feature-title">Spaced Repetition / 간격 반복</span>
+                <span class="feature-desc">SM-2 algorithm schedules each card at the right time / SM-2 알고리즘으로 최적 복습 타이밍 자동 계산</span>
+            </li>
+            <li>
+                <span class="feature-title">Two Study Modes / 양방향 학습</span>
+                <span class="feature-desc">English → Korean and Korean → English / 영→한, 한→영 양방향 학습 모드</span>
+            </li>
+            <li>
+                <span class="feature-title">Smart Notifications / 스마트 알림</span>
+                <span class="feature-desc">Local push notifications when cards are due for review / 복습 타이밍 로컬 푸시 알림</span>
+            </li>
+            <li>
+                <span class="feature-title">100% Private / 완전 프라이빗</span>
+                <span class="feature-desc">All data stored locally on your device, no account required / 모든 데이터 기기 내 저장, 계정 불필요</span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Privacy Policy / 개인정보 처리방침</h2>
+        <p>Remember English Card does not collect, store, or transmit any personal data.<br>
+        Remember English Card는 어떠한 개인정보도 수집, 저장, 전송하지 않습니다.</p>
+        <ul style="font-size: 0.95rem;">
+            <li>All flashcard data is stored locally on your device using SQLite.</li>
+            <li>No account or sign-in is required.</li>
+            <li>The camera is used only for on-device OCR scanning.</li>
+            <li>No analytics, tracking, or advertising SDKs are used.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Permissions / 앱 권한</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Permission / 권한</th>
+                    <th>Reason / 사용 목적</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Camera / 카메라</strong></td>
+                    <td>OCR scanning of textbooks and notes / 교재·노트 OCR 스캔</td>
+                </tr>
+                <tr>
+                    <td><strong>Notifications / 알림</strong></td>
+                    <td>Local review reminders / 로컬 복습 알림</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>FAQ</h2>
+        
+        <div class="faq-item">
+            <div class="faq-q">Q. Does the app require an internet connection? / 인터넷 연결이 필요한가요?</div>
+            <div class="faq-a">No. All features work completely offline. / 아니요. 모든 기능이 완전 오프라인으로 동작합니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q. Is my data backed up to the cloud? / 데이터가 클라우드에 백업되나요?</div>
+            <div class="faq-a">No. All data is stored only on your device. We recommend using your device's local backup (iCloud device backup) to protect your data. / 아니요. 모든 데이터는 기기에만 저장됩니다. 데이터 보호를 위해 기기의 로컬 백업을 이용하시길 권장합니다.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">Q. How does spaced repetition work? / 간격 반복이 어떻게 작동하나요?</div>
+            <div class="faq-a">The app uses the SM-2 algorithm. Cards you answer correctly appear less often, while difficult cards come back sooner. / SM-2 알고리즘을 사용합니다. 정답을 맞힌 카드는 복습 주기가 늘어나고, 틀린 카드는 더 빨리 다시 등장합니다.</div>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Brad Choi. All rights reserved.
+    </footer>
+</div>
+
+</body>
+</html>
