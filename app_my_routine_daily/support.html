@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Routine Daily – Support</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.6;
+    }
+
+    /* ── Header ── */
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #5b8dee, #3a6bdb);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .app-icon svg { width: 44px; height: 44px; fill: #fff; }
+    header h1 { font-size: 26px; font-weight: 700; }
+    header p.tagline {
+      margin-top: 6px;
+      color: #6e6e73;
+      font-size: 15px;
+    }
+    header p.tagline span { display: block; }
+
+    /* ── Lang tabs ── */
+    .lang-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px 16px 0;
+    }
+    .lang-btn {
+      padding: 8px 24px;
+      border-radius: 20px;
+      border: 1.5px solid #d1d1d6;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      color: #6e6e73;
+    }
+    .lang-btn.active {
+      background: #3a6bdb;
+      border-color: #3a6bdb;
+      color: #fff;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section h2 .icon { font-size: 20px; }
+    .section p { color: #3a3a3c; font-size: 15px; margin-bottom: 10px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* Feature list */
+    .feature-list { list-style: none; }
+    .feature-list li {
+      display: flex;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid #f2f2f7;
+      font-size: 15px;
+      color: #3a3a3c;
+    }
+    .feature-list li:last-child { border-bottom: none; }
+    .feature-list .badge {
+      min-width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #eef2ff;
+      color: #3a6bdb;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-list .feat-text strong {
+      display: block;
+      font-weight: 600;
+      color: #1d1d1f;
+      margin-bottom: 2px;
+    }
+
+    /* FAQ */
+    .faq-item { padding: 14px 0; border-bottom: 1px solid #f2f2f7; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-item .q {
+      font-weight: 600;
+      font-size: 15px;
+      margin-bottom: 6px;
+      color: #1d1d1f;
+    }
+    .faq-item .a { font-size: 14px; color: #6e6e73; }
+
+    /* Contact */
+    .contact-link {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 12px 28px;
+      background: #3a6bdb;
+      color: #fff;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .contact-link:hover { background: #2f5bc5; }
+
+    /* Divider */
+    .lang-divider {
+      text-align: center;
+      color: #c7c7cc;
+      font-size: 13px;
+      padding: 16px 0 4px;
+      letter-spacing: .5px;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #8e8e93;
+    }
+
+    /* Hidden */
+    .lang-en, .lang-ko { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+    </svg>
+  </div>
+  <h1>My Routine Daily</h1>
+  <p class="tagline">
+    <span>Track Habits. Stay Consistent.</span>
+    <span>습관을 기록하고, 꾸준히 성장하세요.</span>
+  </p>
+</header>
+
+<!-- Language Tabs -->
+<div class="lang-tabs">
+  <button class="lang-btn active" onclick="showLang('both')">EN + 한국어</button>
+  <button class="lang-btn" onclick="showLang('en')">English</button>
+  <button class="lang-btn" onclick="showLang('ko')">한국어</button>
+</div>
+
+<main>
+
+  <!-- ════════════════════════════════ ENGLISH ════════════════════════════════ -->
+  <div class="lang-en" id="block-en">
+
+    <div class="section">
+      <h2><span class="icon">📱</span> About the App</h2>
+      <p>
+        <strong>My Routine Daily</strong> helps you build and maintain any habit with ease.
+        Whether it's working out, reading, or meditating — set it up once and let the app keep you on track every day.
+      </p>
+      <p>
+        Track completion, duration, reps, weight, or distance. Get reminders at the right time. Watch your progress grow.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">✨</span> Features</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="badge">📋</span>
+          <div class="feat-text"><strong>Flexible Routine Setup</strong>Choose what to track: completion, time, reps, weight, or distance.</div>
+        </li>
+        <li>
+          <span class="badge">🔁</span>
+          <div class="feat-text"><strong>Custom Repeat Scheduling</strong>Daily, specific weekdays, or a set day each month.</div>
+        </li>
+        <li>
+          <span class="badge">🔔</span>
+          <div class="feat-text"><strong>Push Notifications</strong>Set a reminder time per routine. Defaults to 9:00 AM if not set.</div>
+        </li>
+        <li>
+          <span class="badge">🔴</span>
+          <div class="feat-text"><strong>Badge Alerts</strong>See pending routines at a glance on your home screen.</div>
+        </li>
+        <li>
+          <span class="badge">📊</span>
+          <div class="feat-text"><strong>Stats & Charts</strong>Success rate overview and detailed progress charts with date filters.</div>
+        </li>
+        <li>
+          <span class="badge">📅</span>
+          <div class="feat-text"><strong>Calendar View</strong>Switch between daily and monthly views to review your history.</div>
+        </li>
+        <li>
+          <span class="badge">🌐</span>
+          <div class="feat-text"><strong>Multilingual</strong>Available in English and Korean.</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">❓</span> FAQ</h2>
+      <div class="faq-item">
+        <div class="q">How do I add a new routine?</div>
+        <div class="a">Tap the <strong>+</strong> button on the Home screen. Enter a name, choose tracking fields, set a repeat cycle, and optionally add a reminder time.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Can I edit or delete a routine?</div>
+        <div class="a">Yes. Go to <strong>Routine List</strong>, tap the routine you want to modify, and choose Edit or Delete.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Why am I not receiving notifications?</div>
+        <div class="a">Please make sure notification permissions are enabled in <strong>Settings → Notifications → My Routine Daily</strong>. Also check that a reminder time is set for that routine.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Is my data stored in the cloud?</div>
+        <div class="a">All data is stored locally on your device. Cloud backup is not supported in the current version.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">Does the app contain ads?</div>
+        <div class="a">Yes, the app is free and displays banner ads.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">✉️</span> Contact Support</h2>
+      <p>If you have a question, found a bug, or have a feature request, please reach out. We read every message.</p>
+      <a class="contact-link" href="mailto:support@myroutinedaily.app">Contact via Email</a>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">⚖️</span> Legal</h2>
+      <p>© 2025 Inseok Choi. All rights reserved.</p>
+      <p>My Routine Daily is an independent app not affiliated with Apple Inc.</p>
+    </div>
+
+  </div>
+  <!-- /block-en -->
+
+  <!-- Divider shown only when both langs visible -->
+  <div class="lang-divider" id="divider">─────── 한국어 / Korean ───────</div>
+
+  <!-- ════════════════════════════════ KOREAN ════════════════════════════════ -->
+  <div class="lang-ko" id="block-ko">
+
+    <div class="section">
+      <h2><span class="icon">📱</span> 앱 소개</h2>
+      <p>
+        <strong>My Routine Daily</strong>는 어떤 습관이든 쉽게 만들고 꾸준히 이어갈 수 있도록 도와주는 루틴 관리 앱입니다.
+      </p>
+      <p>
+        운동, 독서, 명상 등 나만의 루틴을 한 번 설정하면, 앱이 매일 올바른 방향으로 이끌어줍니다. 실행 여부, 시간, 횟수, 무게, 거리를 기록하고 알림을 받으며 성장을 확인하세요.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">✨</span> 주요 기능</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="badge">📋</span>
+          <div class="feat-text"><strong>자유로운 루틴 설정</strong>실행 여부, 소요 시간, 횟수, 무게, 거리 중 원하는 항목을 자유롭게 조합하세요.</div>
+        </li>
+        <li>
+          <span class="badge">🔁</span>
+          <div class="feat-text"><strong>반복 주기 설정</strong>매일, 매주 특정 요일, 또는 매월 지정일로 설정할 수 있습니다.</div>
+        </li>
+        <li>
+          <span class="badge">🔔</span>
+          <div class="feat-text"><strong>푸시 알림</strong>루틴마다 알림 시간을 설정하세요. 지정하지 않으면 오전 9시에 기본 알림이 발송됩니다.</div>
+        </li>
+        <li>
+          <span class="badge">🔴</span>
+          <div class="feat-text"><strong>배지 알림</strong>미완료 루틴 수를 홈 화면 아이콘 배지로 바로 확인하세요.</div>
+        </li>
+        <li>
+          <span class="badge">📊</span>
+          <div class="feat-text"><strong>통계 및 차트</strong>전체 성공률과 루틴별 항목 변화 그래프를 기간 필터와 함께 확인하세요.</div>
+        </li>
+        <li>
+          <span class="badge">📅</span>
+          <div class="feat-text"><strong>캘린더 뷰</strong>일간/월간 캘린더 뷰를 전환하며 루틴 기록을 한눈에 확인하세요.</div>
+        </li>
+        <li>
+          <span class="badge">🌐</span>
+          <div class="feat-text"><strong>다국어 지원</strong>한국어와 영어를 지원합니다.</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">❓</span> 자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-item">
+        <div class="q">루틴은 어떻게 추가하나요?</div>
+        <div class="a">홈 화면의 <strong>+</strong> 버튼을 눌러 루틴 이름, 기록 항목, 반복 주기를 설정하고 원하면 알림 시간도 추가하세요.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">루틴을 수정하거나 삭제할 수 있나요?</div>
+        <div class="a">네. <strong>루틴 목록</strong> 화면에서 수정할 루틴을 선택한 후 수정 또는 삭제를 선택하세요.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">알림이 오지 않아요.</div>
+        <div class="a"><strong>설정 → 알림 → My Routine Daily</strong>에서 알림 권한이 허용되어 있는지 확인하세요. 해당 루틴에 알림 시간이 설정되어 있는지도 확인해 주세요.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">데이터는 어디에 저장되나요?</div>
+        <div class="a">모든 데이터는 기기 내부에 저장됩니다. 현재 버전에서는 클라우드 백업을 지원하지 않습니다.</div>
+      </div>
+      <div class="faq-item">
+        <div class="q">광고가 포함되어 있나요?</div>
+        <div class="a">네, 앱은 무료로 제공되며 배너 광고가 표시됩니다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">✉️</span> 문의 및 지원</h2>
+      <p>버그 신고, 기능 제안, 궁금한 점이 있으시면 언제든지 연락해 주세요. 모든 메시지를 직접 확인합니다.</p>
+      <a class="contact-link" href="mailto:support@myroutinedaily.app">이메일로 문의하기</a>
+    </div>
+
+    <div class="section">
+      <h2><span class="icon">⚖️</span> 저작권</h2>
+      <p>© 2025 Inseok Choi. All rights reserved.</p>
+      <p>My Routine Daily는 Apple Inc.와 관련이 없는 독립 앱입니다.</p>
+    </div>
+
+  </div>
+  <!-- /block-ko -->
+
+</main>
+
+<footer>
+  My Routine Daily · v1.0.1 · © 2025 Inseok Choi
+</footer>
+
+<script>
+  function showLang(lang) {
+    const en = document.getElementById('block-en');
+    const ko = document.getElementById('block-ko');
+    const div = document.getElementById('divider');
+    const btns = document.querySelectorAll('.lang-btn');
+
+    btns.forEach(b => b.classList.remove('active'));
+
+    if (lang === 'en') {
+      en.style.display = 'block';
+      ko.style.display = 'none';
+      div.style.display = 'none';
+      btns[1].classList.add('active');
+    } else if (lang === 'ko') {
+      en.style.display = 'none';
+      ko.style.display = 'block';
+      div.style.display = 'none';
+      btns[2].classList.add('active');
+    } else {
+      en.style.display = 'block';
+      ko.style.display = 'block';
+      div.style.display = 'block';
+      btns[0].classList.add('active');
+    }
+  }
+</script>
+
+</body>
+</html>
