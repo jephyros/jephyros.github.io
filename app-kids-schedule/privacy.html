@@ -1,9 +1,9 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Routine Daily – Privacy Policy / 개인정보 처리방침</title>
+  <title>Kids Schedule – Privacy Policy / 개인정보 처리방침</title>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -24,7 +24,7 @@
       width: 72px;
       height: 72px;
       border-radius: 18px;
-      background: linear-gradient(135deg, #5b8dee, #3a6bdb);
+      background: linear-gradient(135deg, #ff8c42, #ff5f1f);
       display: inline-flex;
       align-items: center;
       justify-content: center;
@@ -65,8 +65,8 @@
       color: #6e6e73;
     }
     .lang-btn.active {
-      background: #3a6bdb;
-      border-color: #3a6bdb;
+      background: #ff5f1f;
+      border-color: #ff5f1f;
       color: #fff;
     }
 
@@ -99,8 +99,8 @@
       width: 26px;
       height: 26px;
       border-radius: 8px;
-      background: #eef2ff;
-      color: #3a6bdb;
+      background: #fff3ee;
+      color: #ff5f1f;
       font-size: 13px;
       font-weight: 700;
       flex-shrink: 0;
@@ -136,8 +136,8 @@
 
     .chip {
       display: inline-block;
-      background: #eef2ff;
-      color: #3a6bdb;
+      background: #fff3ee;
+      color: #ff5f1f;
       border-radius: 6px;
       padding: 2px 8px;
       font-size: 13px;
@@ -148,8 +148,8 @@
     .chip.red   { background: #fff0f0; color: #c0392b; }
 
     .highlight {
-      background: #eef2ff;
-      border-left: 4px solid #3a6bdb;
+      background: #fff3ee;
+      border-left: 4px solid #ff5f1f;
       border-radius: 0 10px 10px 0;
       padding: 14px 16px;
       font-size: 14px;
@@ -161,14 +161,14 @@
       display: inline-block;
       margin-top: 14px;
       padding: 11px 26px;
-      background: #3a6bdb;
+      background: #ff5f1f;
       color: #fff;
       border-radius: 12px;
       text-decoration: none;
       font-weight: 600;
       font-size: 15px;
     }
-    .contact-link:hover { background: #2f5bc5; }
+    .contact-link:hover { background: #e5521a; }
 
     .lang-divider {
       text-align: center;
@@ -191,10 +191,15 @@
 <header>
   <div class="app-icon">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/>
+      <path d="M8 2v3M16 2v3M3 8h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="9" cy="13" r="1.2" fill="#fff"/>
+      <circle cx="12" cy="13" r="1.2" fill="#fff"/>
+      <circle cx="15" cy="13" r="1.2" fill="#fff"/>
+      <circle cx="9" cy="17" r="1.2" fill="#fff"/>
+      <circle cx="12" cy="17" r="1.2" fill="#fff"/>
     </svg>
   </div>
-  <h1>My Routine Daily</h1>
+  <h1>Kids Schedule</h1>
   <div class="subtitle">Privacy Policy &nbsp;·&nbsp; 개인정보 처리방침</div>
   <div class="updated">Effective / 시행일: 2025-01-01 &nbsp;|&nbsp; Updated / 최종 수정: 2025-01-01</div>
 </header>
@@ -213,26 +218,33 @@
     <div class="section">
       <h2><span class="num">1</span> Overview</h2>
       <p>
-        <strong>My Routine Daily</strong> ("the App") is an independently developed application ("we", "us", "our").
+        <strong>Kids Schedule</strong> ("the App") is an independently developed iOS application for managing
+        children's daily schedules, classes, and activities ("we", "us", "our").
         This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data.
       </p>
       <p>
         We are committed to protecting your privacy. <strong>We do not collect, store, or transmit any personally identifiable information.</strong>
+        All data you enter stays on your device.
       </p>
     </div>
 
     <div class="section">
       <h2><span class="num">2</span> Information We Collect</h2>
-      <p>The App operates primarily offline. All routine data you create is stored locally on your device only.</p>
+      <p>The App operates entirely offline. All schedule and child profile data you create is stored locally on your device only.</p>
       <table class="info-table">
         <thead>
           <tr><th>Data Type</th><th>Collected?</th><th>Details</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>Routine & log data</td>
+            <td>Child profiles &amp; schedules</td>
             <td><span class="chip green">Local only</span></td>
-            <td>Stored on-device via SQLite. Never transmitted.</td>
+            <td>Stored on-device via SQLite. Never transmitted to any server.</td>
+          </tr>
+          <tr>
+            <td>Teacher / contact info</td>
+            <td><span class="chip green">Local only</span></td>
+            <td>Stored on-device only. Not shared with third parties.</td>
           </tr>
           <tr>
             <td>Name, email, account</td>
@@ -266,7 +278,7 @@
     <div class="section">
       <h2><span class="num">3</span> Notifications</h2>
       <p>
-        The App requests permission to send push notifications to remind you of your routines.
+        The App requests permission to send push notifications to remind you of children's upcoming schedules and classes.
         Notification permission is optional — the App works normally without it.
         We do not use notifications to collect any data.
       </p>
@@ -284,14 +296,15 @@
       </p>
       <div class="highlight">
         You can opt out of personalized ads at any time in your device settings:<br />
-        <strong>iOS:</strong> Settings → Privacy & Security → Tracking → disable "Allow Apps to Request to Track"
+        <strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking → disable "Allow Apps to Request to Track"
       </div>
     </div>
 
     <div class="section">
-      <h2><span class="num">5</span> Data Retention & Deletion</h2>
+      <h2><span class="num">5</span> Data Export &amp; Deletion</h2>
       <p>
-        All app data (routines and logs) is stored exclusively on your device.
+        All app data (child profiles, schedules, categories) is stored exclusively on your device.
+        You can export your data as a JSON file via <strong>Settings → Export</strong> at any time.
         To delete all data, simply uninstall the App. No data is held on any external server.
       </p>
     </div>
@@ -299,7 +312,8 @@
     <div class="section">
       <h2><span class="num">6</span> Children's Privacy</h2>
       <p>
-        The App is rated 4+ and does not knowingly collect personal information from children under 13.
+        Kids Schedule is designed to help parents manage their children's activities and does not require children to directly interact with the App.
+        The App does not knowingly collect personal information from children under 13.
         If you believe a child has provided personal information, please contact us immediately.
       </p>
     </div>
@@ -329,31 +343,37 @@
     <div class="section">
       <h2><span class="num">1</span> 개요</h2>
       <p>
-        <strong>My Routine Daily</strong>(이하 "앱")는 개인 개발자가 개발·운영하는 독립 앱입니다.
+        <strong>Kids Schedule</strong>(이하 "앱")는 자녀의 일정·수업·활동을 관리하기 위한 독립 개발 iOS 앱입니다.
         본 개인정보 처리방침은 앱이 수집하는 정보, 사용 방법, 그리고 이용자의 권리에 대해 설명합니다.
       </p>
       <p>
         개발자는 이용자의 개인정보 보호를 최우선으로 합니다. <strong>본 앱은 개인 식별 정보를 수집·저장·전송하지 않습니다.</strong>
+        입력한 모든 데이터는 기기 내부에만 저장됩니다.
       </p>
     </div>
 
     <div class="section">
       <h2><span class="num">2</span> 수집하는 정보</h2>
-      <p>앱은 주로 오프라인으로 동작하며, 이용자가 입력하는 루틴 데이터는 기기 내부에만 저장됩니다.</p>
+      <p>앱은 완전한 오프라인으로 동작하며, 자녀 프로필 및 일정 데이터는 기기 내부에만 저장됩니다.</p>
       <table class="info-table">
         <thead>
           <tr><th>데이터 유형</th><th>수집 여부</th><th>상세</th></tr>
         </thead>
         <tbody>
           <tr>
-            <td>루틴 및 기록 데이터</td>
+            <td>자녀 프로필 및 일정</td>
             <td><span class="chip green">기기 내 저장</span></td>
-            <td>SQLite로 기기에만 저장, 외부 전송 없음.</td>
+            <td>SQLite로 기기에만 저장, 외부 서버로 전송되지 않습니다.</td>
+          </tr>
+          <tr>
+            <td>선생님·연락처 정보</td>
+            <td><span class="chip green">기기 내 저장</span></td>
+            <td>기기에만 저장되며, 제3자와 공유되지 않습니다.</td>
           </tr>
           <tr>
             <td>이름, 이메일, 계정</td>
             <td><span class="chip red">수집 안 함</span></td>
-            <td>로그인 및 계정 불필요.</td>
+            <td>로그인 및 계정이 필요하지 않습니다.</td>
           </tr>
           <tr>
             <td>위치 정보</td>
@@ -382,7 +402,7 @@
     <div class="section">
       <h2><span class="num">3</span> 알림(푸시 노티피케이션)</h2>
       <p>
-        앱은 루틴 알림 발송을 위해 푸시 알림 권한을 요청합니다.
+        앱은 자녀의 수업 및 일정 알림 발송을 위해 푸시 알림 권한을 요청합니다.
         알림 권한은 선택 사항으로, 허용하지 않아도 앱의 주요 기능은 정상 동작합니다.
         알림을 통해 어떠한 개인정보도 수집하지 않습니다.
       </p>
@@ -405,9 +425,10 @@
     </div>
 
     <div class="section">
-      <h2><span class="num">5</span> 데이터 보관 및 삭제</h2>
+      <h2><span class="num">5</span> 데이터 내보내기 및 삭제</h2>
       <p>
-        앱의 모든 데이터(루틴, 기록)는 이용자의 기기에만 저장됩니다.
+        앱의 모든 데이터(자녀 프로필, 일정, 카테고리)는 이용자의 기기에만 저장됩니다.
+        <strong>설정 → 내보내기(JSON)</strong>를 통해 언제든지 데이터를 백업할 수 있습니다.
         앱을 삭제하면 모든 데이터가 함께 삭제되며, 별도 외부 서버에 저장된 데이터는 없습니다.
       </p>
     </div>
@@ -415,7 +436,8 @@
     <div class="section">
       <h2><span class="num">6</span> 아동 개인정보 보호</h2>
       <p>
-        앱의 연령 등급은 4+이며, 만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다.
+        Kids Schedule은 부모가 자녀의 활동을 관리할 수 있도록 설계된 앱으로, 아동이 직접 앱을 사용할 것을 의도하지 않습니다.
+        만 14세 미만 아동의 개인정보를 고의로 수집하지 않습니다.
         아동이 개인정보를 제공한 것으로 의심되는 경우 즉시 개발자에게 연락해 주세요.
       </p>
     </div>
