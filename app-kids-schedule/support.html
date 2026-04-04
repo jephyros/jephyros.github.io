@@ -1,1 +1,584 @@
-<html></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kids Schedule – Support / 고객지원</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #ff8c42, #ff5f1f);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+    }
+    .app-icon svg { width: 40px; height: 40px; }
+    header h1 { font-size: 24px; font-weight: 700; }
+    header .subtitle {
+      margin-top: 6px;
+      color: #6e6e73;
+      font-size: 14px;
+    }
+    .version-badge {
+      display: inline-block;
+      margin-top: 10px;
+      background: #f2f2f7;
+      border-radius: 8px;
+      padding: 4px 12px;
+      font-size: 13px;
+      color: #8e8e93;
+    }
+
+    .lang-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      padding: 24px 16px 0;
+    }
+    .lang-btn {
+      padding: 8px 24px;
+      border-radius: 20px;
+      border: 1.5px solid #d1d1d6;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .2s;
+      color: #6e6e73;
+    }
+    .lang-btn.active {
+      background: #ff5f1f;
+      border-color: #ff5f1f;
+      color: #fff;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    /* Feature Cards */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .feature-card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px 16px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .feature-card .icon {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+    .feature-card .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #1d1d1f;
+    }
+    .feature-card .desc {
+      font-size: 12px;
+      color: #8e8e93;
+      margin-top: 4px;
+    }
+
+    .section {
+      background: #fff;
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.06);
+    }
+    .section h2 {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #1d1d1f;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .section h2 .icon {
+      font-size: 20px;
+    }
+    .section p {
+      font-size: 15px;
+      color: #3a3a3c;
+      margin-bottom: 10px;
+    }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* FAQ */
+    .faq-item {
+      border-bottom: 1px solid #f2f2f7;
+      padding: 14px 0;
+    }
+    .faq-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .faq-item:first-child { padding-top: 0; }
+    .faq-q {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1d1d1f;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .faq-q .arrow {
+      color: #ff5f1f;
+      font-size: 18px;
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .faq-q.open .arrow { transform: rotate(90deg); }
+    .faq-a {
+      font-size: 14px;
+      color: #3a3a3c;
+      margin-top: 10px;
+      display: none;
+      line-height: 1.7;
+    }
+    .faq-a.open { display: block; }
+
+    /* Steps */
+    .steps { list-style: none; }
+    .steps li {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 12px;
+      font-size: 14px;
+      color: #3a3a3c;
+    }
+    .steps li:last-child { margin-bottom: 0; }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ff5f1f;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .highlight {
+      background: #fff3ee;
+      border-left: 4px solid #ff5f1f;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #3a3a3c;
+      margin-top: 8px;
+    }
+
+    .contact-card {
+      background: linear-gradient(135deg, #ff8c42, #ff5f1f);
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 16px;
+      text-align: center;
+      color: #fff;
+    }
+    .contact-card h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .contact-card p {
+      font-size: 14px;
+      opacity: .85;
+      margin-bottom: 18px;
+    }
+    .contact-link {
+      display: inline-block;
+      padding: 11px 28px;
+      background: #fff;
+      color: #ff5f1f;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 15px;
+    }
+    .contact-link:hover { background: #f2f2f7; }
+
+    .lang-divider {
+      text-align: center;
+      color: #c7c7cc;
+      font-size: 13px;
+      padding: 20px 0 8px;
+      letter-spacing: .5px;
+    }
+
+    .privacy-link {
+      display: block;
+      text-align: center;
+      margin-top: 8px;
+      color: #ff5f1f;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .privacy-link:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #8e8e93;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-icon">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M8 2v3M16 2v3M3 8h18M5 4h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <circle cx="9" cy="13" r="1.2" fill="#fff"/>
+      <circle cx="12" cy="13" r="1.2" fill="#fff"/>
+      <circle cx="15" cy="13" r="1.2" fill="#fff"/>
+      <circle cx="9" cy="17" r="1.2" fill="#fff"/>
+      <circle cx="12" cy="17" r="1.2" fill="#fff"/>
+    </svg>
+  </div>
+  <h1>Kids Schedule</h1>
+  <div class="subtitle">Support &nbsp;·&nbsp; 고객지원</div>
+  <div class="version-badge">Version 1.0.0 &nbsp;·&nbsp; iOS</div>
+</header>
+
+<div class="lang-tabs">
+  <button class="lang-btn active" onclick="showLang('both')">EN + 한국어</button>
+  <button class="lang-btn" onclick="showLang('en')">English</button>
+  <button class="lang-btn" onclick="showLang('ko')">한국어</button>
+</div>
+
+<main>
+
+  <!-- ══════════════════ ENGLISH ══════════════════ -->
+  <div id="block-en">
+
+    <!-- Feature Overview -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">📅</div>
+        <div class="label">Calendar</div>
+        <div class="desc">Month / Week / Day view</div>
+      </div>
+      <div class="feature-card">
+        <div class="icon">👧</div>
+        <div class="label">Children</div>
+        <div class="desc">Manage multiple children</div>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <div class="label">Alarms</div>
+        <div class="desc">Schedule reminders</div>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📤</div>
+        <div class="label">Backup</div>
+        <div class="desc">Export &amp; Import JSON</div>
+      </div>
+    </div>
+
+    <!-- Getting Started -->
+    <div class="section">
+      <h2><span class="icon">🚀</span> Getting Started</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span>Tap the <strong>Children</strong> tab and tap <strong>+</strong> to add your first child. Enter a name and choose a color.</span></li>
+        <li><span class="step-num">2</span><span>Go to the child's detail page and tap <strong>+</strong> to add a schedule (name, category, days of week, start &amp; end time).</span></li>
+        <li><span class="step-num">3</span><span>Enable the <strong>Alarm</strong> toggle on a schedule to receive push notifications before it starts.</span></li>
+        <li><span class="step-num">4</span><span>View all children's schedules together on the <strong>Calendar</strong> tab (month / week / day views).</span></li>
+        <li><span class="step-num">5</span><span>Add teacher names, phone numbers, and memos in the <strong>Contacts</strong> section of each child's profile.</span></li>
+      </ol>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <h2><span class="icon">❓</span> FAQ</h2>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Notifications are not working. What should I do?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          Go to <strong>iPhone Settings → Kids Schedule → Notifications</strong> and make sure notifications are enabled.
+          In the app, open the schedule, make sure <strong>Alarm</strong> is turned on, and set the desired alert time (on time or N minutes before).
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How do I back up my data?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          Go to <strong>Settings → Export (JSON)</strong> to save your data as a file.
+          To restore, tap <strong>Settings → Import (JSON)</strong> and select the saved file.
+          You can choose to <em>merge</em> with or <em>replace</em> existing data.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Can I manage multiple children?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          Yes. Tap <strong>+</strong> in the Children tab to add as many children as you need.
+          Each child has their own color, making it easy to identify schedules on the calendar at a glance.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How do I add or rename categories?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          Go to <strong>Settings → Category Management</strong>.
+          Default categories are School, Academy, and Other. You can add custom categories or rename existing ones.
+          If a category is deleted, its schedules will be reassigned to "Other".
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Will my data be lost if I delete the app?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          Yes. All data is stored locally on your device. Please export your data via
+          <strong>Settings → Export (JSON)</strong> before deleting the app.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          How do I change the app language?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          Go to <strong>Settings → Language</strong> and select <em>English</em> or <em>한국어</em>.
+          The app will apply the new language immediately.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>Need more help?</h2>
+      <p>Can't find what you're looking for? Send us an email and we'll get back to you.</p>
+      <a class="contact-link" href="mailto:kr.chis@gmail.com">kr.chis@gmail.com</a>
+    </div>
+
+    <a class="privacy-link" href="privacy.html">Privacy Policy →</a>
+
+  </div>
+  <!-- /block-en -->
+
+  <div class="lang-divider" id="divider">─────── 한국어 / Korean ───────</div>
+
+  <!-- ══════════════════ KOREAN ══════════════════ -->
+  <div id="block-ko">
+
+    <!-- Feature Overview -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="icon">📅</div>
+        <div class="label">캘린더</div>
+        <div class="desc">월 / 주 / 일 보기</div>
+      </div>
+      <div class="feature-card">
+        <div class="icon">👧</div>
+        <div class="label">자녀 관리</div>
+        <div class="desc">여러 자녀 등록 가능</div>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🔔</div>
+        <div class="label">알림</div>
+        <div class="desc">수업 전 알람 설정</div>
+      </div>
+      <div class="feature-card">
+        <div class="icon">📤</div>
+        <div class="label">백업</div>
+        <div class="desc">JSON 내보내기/가져오기</div>
+      </div>
+    </div>
+
+    <!-- Getting Started -->
+    <div class="section">
+      <h2><span class="icon">🚀</span> 시작하기</h2>
+      <ol class="steps">
+        <li><span class="step-num">1</span><span><strong>자녀</strong> 탭에서 <strong>+</strong>를 탭해 첫 번째 자녀를 등록합니다. 이름을 입력하고 색상을 선택하세요.</span></li>
+        <li><span class="step-num">2</span><span>자녀 상세 페이지에서 <strong>+</strong>를 탭해 일정(이름, 카테고리, 요일, 시작·종료 시간)을 추가합니다.</span></li>
+        <li><span class="step-num">3</span><span>일정에서 <strong>알람</strong> 토글을 켜면 수업 시작 전 푸시 알림을 받을 수 있습니다.</span></li>
+        <li><span class="step-num">4</span><span><strong>캘린더</strong> 탭에서 모든 자녀의 일정을 한눈에 확인합니다 (월 / 주 / 일 보기).</span></li>
+        <li><span class="step-num">5</span><span>각 자녀 프로필의 <strong>연락처</strong> 섹션에 선생님 이름, 전화번호, 메모를 등록할 수 있습니다.</span></li>
+      </ol>
+    </div>
+
+    <!-- FAQ -->
+    <div class="section">
+      <h2><span class="icon">❓</span> 자주 묻는 질문</h2>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          알림이 오지 않아요. 어떻게 해야 하나요?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          <strong>iPhone 설정 → Kids Schedule → 알림</strong>에서 알림이 허용되어 있는지 확인하세요.
+          앱에서는 해당 일정을 열어 <strong>알람</strong>이 켜져 있는지, 알림 시간(정시 또는 N분 전)이 설정되어 있는지 확인해 주세요.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          데이터를 백업하려면 어떻게 하나요?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          <strong>설정 → 내보내기(JSON)</strong>를 탭해 파일로 저장하세요.
+          복원 시에는 <strong>설정 → 가져오기(JSON)</strong>에서 저장한 파일을 선택합니다.
+          기존 데이터와 <em>병합</em>하거나 <em>교체</em>하는 방식 중 선택할 수 있습니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          자녀를 여러 명 등록할 수 있나요?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          네. 자녀 탭에서 <strong>+</strong>를 탭해 원하는 만큼 자녀를 추가할 수 있습니다.
+          자녀마다 고유 색상이 지정되어 캘린더에서 한눈에 구분할 수 있습니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          카테고리를 추가하거나 이름을 바꾸려면 어떻게 하나요?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          <strong>설정 → 카테고리 관리</strong>로 이동하세요.
+          기본 카테고리는 학교, 학원, 기타이며, 새 카테고리를 추가하거나 이름을 변경할 수 있습니다.
+          카테고리를 삭제하면 해당 카테고리의 일정은 '기타'로 재지정됩니다.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          앱을 삭제하면 데이터가 사라지나요?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          네. 모든 데이터는 기기에만 저장됩니다. 앱 삭제 전에 반드시
+          <strong>설정 → 내보내기(JSON)</strong>로 백업해 두세요.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          앱 언어를 바꾸려면 어떻게 하나요?
+          <span class="arrow">›</span>
+        </div>
+        <div class="faq-a">
+          <strong>설정 → 언어</strong>에서 <em>한국어</em> 또는 <em>English</em>를 선택하세요.
+          언어가 즉시 적용됩니다.
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-card">
+      <h2>추가 도움이 필요하신가요?</h2>
+      <p>원하는 답변을 찾지 못하셨나요? 이메일로 문의주시면 빠르게 답변드리겠습니다.</p>
+      <a class="contact-link" href="mailto:kr.chis@gmail.com">kr.chis@gmail.com</a>
+    </div>
+
+    <a class="privacy-link" href="privacy.html">개인정보 처리방침 →</a>
+
+  </div>
+  <!-- /block-ko -->
+
+</main>
+
+<footer>
+  © 2025 Brad Choi. All rights reserved.
+</footer>
+
+<script>
+  function showLang(lang) {
+    const en  = document.getElementById('block-en');
+    const ko  = document.getElementById('block-ko');
+    const div = document.getElementById('divider');
+    const btns = document.querySelectorAll('.lang-btn');
+
+    btns.forEach(b => b.classList.remove('active'));
+
+    if (lang === 'en') {
+      en.style.display  = 'block';
+      ko.style.display  = 'none';
+      div.style.display = 'none';
+      btns[1].classList.add('active');
+    } else if (lang === 'ko') {
+      en.style.display  = 'none';
+      ko.style.display  = 'block';
+      div.style.display = 'none';
+      btns[2].classList.add('active');
+    } else {
+      en.style.display  = 'block';
+      ko.style.display  = 'block';
+      div.style.display = 'block';
+      btns[0].classList.add('active');
+    }
+  }
+
+  function toggleFaq(el) {
+    const answer = el.nextElementSibling;
+    const isOpen = answer.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-q').forEach(q => q.classList.remove('open'));
+    // Open clicked if it was closed
+    if (!isOpen) {
+      answer.classList.add('open');
+      el.classList.add('open');
+    }
+  }
+</script>
+
+</body>
+</html>
