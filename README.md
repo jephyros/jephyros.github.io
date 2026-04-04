@@ -11,10 +11,10 @@
 ---
 
 ### 📱 출시 앱 목록 (Our Apps)
-#### https://apps.apple.com/us/app/multiscan-qr-barcode/id6759554964
-#### https://apps.apple.com/us/app/simple-server-monitor/id6759896235
-#### https://apps.apple.com/us/app/my-routine-daily/id6761246847
-#### https://apps.apple.com/us/app/remember-english-card/id6760830729
+#### https://apps.apple.com/us/app/multiscan-qr-barcode/id6759554964(https://apps.apple.com/us/app/multiscan-qr-barcode/id6759554964)
+#### https://apps.apple.com/us/app/simple-server-monitor/id6759896235(https://apps.apple.com/us/app/simple-server-monitor/id6759896235)
+#### https://apps.apple.com/us/app/my-routine-daily/id6761246847(https://apps.apple.com/us/app/my-routine-daily/id6761246847)
+#### https://apps.apple.com/us/app/remember-english-card/id6760830729(https://apps.apple.com/us/app/remember-english-card/id6760830729)
 
 
 ---
