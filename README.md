@@ -11,10 +11,10 @@
 ---
 
 ### 📱 출시 앱 목록 (Our Apps)
-
-#### **1. 바코드 & QR 스캐너 (Barcode & QR Scanner)**
-* 빠르고 정확한 실시간 코드 인식 기능을 제공합니다.
-* 13가지 이상의 전 세계 표준 형식을 지원하며, 직관적인 피드백을 제공합니다.
+#### https://apps.apple.com/us/app/multiscan-qr-barcode/id6759554964
+#### https://apps.apple.com/us/app/simple-server-monitor/id6759896235
+#### https://apps.apple.com/us/app/my-routine-daily/id6761246847
+#### https://apps.apple.com/us/app/remember-english-card/id6760830729
 
 
 ---
@@ -32,9 +32,10 @@ Thank you for using our applications. If you have any questions, suggestions, or
 
 ### 📱 Our App Gallery
 
-#### **1. Barcode & QR Scanner**
-* Provides fast and accurate real-time code recognition.
-* Supports 13+ global standard formats with intuitive visual/audio feedback.
+#### https://apps.apple.com/us/app/multiscan-qr-barcode/id6759554964
+#### https://apps.apple.com/us/app/simple-server-monitor/id6759896235
+#### https://apps.apple.com/us/app/my-routine-daily/id6761246847
+#### https://apps.apple.com/us/app/remember-english-card/id6760830729
 
 
 
