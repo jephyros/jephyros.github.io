@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Study Timer — Support / 고객지원</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      line-height: 1.7;
+    }
+    header {
+      background: #1c1c1e;
+      color: #fff;
+      padding: 28px 24px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 26px; font-weight: 700; letter-spacing: -0.5px; }
+    header p  { font-size: 14px; color: #aeaeb2; margin-top: 4px; }
+
+    .lang-toggle {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 18px 24px;
+      background: #fff;
+      border-bottom: 1px solid #e5e5ea;
+    }
+    .lang-toggle button {
+      padding: 7px 22px;
+      border-radius: 20px;
+      border: 1.5px solid #d1d1d6;
+      background: transparent;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all 0.2s;
+    }
+    .lang-toggle button.active {
+      background: #1c1c1e;
+      color: #fff;
+      border-color: #1c1c1e;
+    }
+
+    .container { max-width: 720px; margin: 0 auto; padding: 32px 20px 60px; }
+
+    .section { background: #fff; border-radius: 16px; padding: 24px; margin-bottom: 20px; }
+    .section h2 {
+      font-size: 18px; font-weight: 700;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .section p  { font-size: 15px; color: #3a3a3c; margin-bottom: 10px; }
+    .section ul { padding-left: 20px; }
+    .section li { font-size: 15px; color: #3a3a3c; margin-bottom: 7px; }
+
+    .faq-item { margin-bottom: 18px; }
+    .faq-item .q { font-weight: 700; font-size: 15px; margin-bottom: 6px; }
+    .faq-item .a { font-size: 15px; color: #3a3a3c; padding-left: 14px; border-left: 3px solid #e5e5ea; }
+
+    .contact-box {
+      background: #1c1c1e;
+      color: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+    }
+    .contact-box h2 { font-size: 18px; margin-bottom: 10px; }
+    .contact-box a  { color: #64d2ff; text-decoration: none; font-size: 15px; }
+
+    .hidden { display: none; }
+
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 13px;
+      color: #8e8e93;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Study Timer</h1>
+  <p>Support &amp; Help / 고객지원</p>
+</header>
+
+<div class="lang-toggle">
+  <button class="active" onclick="setLang('ko')" id="btn-ko">한국어</button>
+  <button onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<!-- ──────────────── 한국어 ──────────────── -->
+<div id="content-ko" class="container">
+
+  <div class="section">
+    <h2>앱 소개</h2>
+    <p>Study Timer는 포모도로 기법 기반의 집중력 향상 타이머 앱입니다.</p>
+    <p>집중 세션과 휴식을 반복하며 공부·업무 생산성을 높여 보세요.</p>
+    <ul>
+      <li>버전: 0.7.3</li>
+      <li>지원 기기: iPhone (iOS 전용)</li>
+      <li>언어: 한국어, English</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>사용 방법</h2>
+    <div class="faq-item">
+      <div class="q">⏱ 타이머 시간을 바꾸려면?</div>
+      <div class="a">타이머 화면에서 시간 숫자를 위/아래로 스와이프하면 시간이 조정됩니다. 또는 설정 탭에서 집중·휴식 시간을 직접 입력할 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🔔 알림이 오지 않아요</div>
+      <div class="a">iPhone 설정 → Study Timer → 알림 허용이 켜져 있는지 확인해 주세요. 첫 실행 시 앱에서 알림 권한을 요청하며, 허용해야 세션 종료 알림을 받을 수 있습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🎵 배경음이 재생되지 않아요</div>
+      <div class="a">iPhone 측면 무음 스위치가 켜져 있으면 소리가 나지 않을 수 있습니다. 무음 모드를 해제하거나 볼륨을 올려 주세요.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">📊 통계가 초기화됐어요</div>
+      <div class="a">앱의 모든 데이터는 기기 로컬에 저장됩니다. 앱 삭제 시 데이터도 함께 삭제됩니다. 현재 클라우드 백업은 지원하지 않습니다.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🏷 태그는 어떻게 만드나요?</div>
+      <div class="a">설정 탭 → 태그 관리 → 태그 이름 입력 후 아이콘과 색상을 선택하고 추가 버튼을 누르면 됩니다.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>권한 안내</h2>
+    <ul>
+      <li><strong>알림</strong>: 집중 세션 종료 및 휴식 시작 알림 전송에 사용됩니다.</li>
+      <li><strong>백그라운드 오디오</strong>: 앱이 백그라운드 상태일 때 앰비언트 사운드를 재생하는 데 사용됩니다.</li>
+    </ul>
+  </div>
+
+  <div class="contact-box">
+    <h2>문의하기</h2>
+    <p style="margin-bottom:12px;font-size:14px;color:#aeaeb2;">버그 신고, 기능 제안, 기타 문의는 이메일로 보내주세요.</p>
+    <a href="mailto:krchis@gmail.com">krchis@gmail.com</a>
+  </div>
+</div>
+
+<!-- ──────────────── English ──────────────── -->
+<div id="content-en" class="container hidden">
+
+  <div class="section">
+    <h2>About the App</h2>
+    <p>Study Timer is a Pomodoro-based focus timer designed to boost productivity.</p>
+    <p>Alternate between focused work sessions and short breaks to stay sharp all day.</p>
+    <ul>
+      <li>Version: 0.7.3</li>
+      <li>Platform: iPhone (iOS only)</li>
+      <li>Languages: Korean, English</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>How to Use</h2>
+    <div class="faq-item">
+      <div class="q">⏱ How do I change the timer duration?</div>
+      <div class="a">On the Timer screen, swipe up or down on the time digits to adjust the duration. You can also go to the Settings tab to enter a specific number of minutes.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🔔 I'm not receiving notifications</div>
+      <div class="a">Go to iPhone Settings → Study Timer → Notifications and make sure notifications are enabled. On first launch, the app will request notification permission — you must allow it to receive session-end alerts.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🎵 Ambient sound is not playing</div>
+      <div class="a">Check if the Silent switch on the side of your iPhone is on. Turn off Silent mode or increase the volume.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">📊 My stats were reset</div>
+      <div class="a">All data is stored locally on your device. Deleting the app also deletes all data. Cloud backup is not currently supported.</div>
+    </div>
+    <div class="faq-item">
+      <div class="q">🏷 How do I create a tag?</div>
+      <div class="a">Go to Settings → Tag Management → Enter a tag name, choose an icon and color, then tap the Add button.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>Notifications</strong>: Used to send alerts when a focus session or break ends.</li>
+      <li><strong>Background Audio</strong>: Used to play ambient sounds while the app is in the background.</li>
+    </ul>
+  </div>
+
+  <div class="contact-box">
+    <h2>Contact Us</h2>
+    <p style="margin-bottom:12px;font-size:14px;color:#aeaeb2;">For bug reports, feature requests, or any other inquiries, please email us.</p>
+    <a href="mailto:krchis@gmail.com">krchis@gmail.com</a>
+  </div>
+</div>
+
+<footer>
+  &copy; 2024 Choi Inseok · Study Timer · <a href="privacy.html" style="color:#8e8e93;">Privacy Policy</a>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('content-ko').classList.toggle('hidden', lang !== 'ko');
+    document.getElementById('content-en').classList.toggle('hidden', lang !== 'en');
+    document.getElementById('btn-ko').classList.toggle('active', lang === 'ko');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+</script>
+</body>
+</html>
