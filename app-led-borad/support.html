@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LED Board - Support / 지원</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --surface: #111111;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --accent: #ff6b35;
+      --accent2: #ffcc00;
+      --text: #f0f0f0;
+      --muted: #888;
+      --radius: 12px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      line-height: 1.7;
+    }
+    header {
+      background: linear-gradient(135deg, #1a0a00, #0a0a1a);
+      border-bottom: 1px solid var(--border);
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 48px;
+      margin-bottom: 8px;
+    }
+    header h1 {
+      font-size: 2rem;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    header p { color: var(--muted); margin-top: 6px; }
+
+    .lang-switch {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+    .lang-switch button {
+      padding: 8px 24px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 14px;
+      transition: all 0.2s;
+    }
+    .lang-switch button.active,
+    .lang-switch button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    main { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    .section { margin-bottom: 48px; }
+    .section h2 {
+      font-size: 1.4rem;
+      color: var(--accent2);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .faq-q {
+      padding: 16px 20px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+    .faq-q::after { content: '+'; font-size: 1.4rem; color: var(--accent); }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-a {
+      display: none;
+      padding: 0 20px 16px;
+      color: #bbb;
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+    }
+    .faq-item.open .faq-a { display: block; }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+    .feature-card .icon { font-size: 28px; margin-bottom: 10px; }
+    .feature-card h3 { font-size: 0.95rem; margin-bottom: 6px; color: var(--accent2); }
+    .feature-card p { font-size: 0.85rem; color: var(--muted); }
+
+    .contact-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      text-align: center;
+    }
+    .contact-box a {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 12px 32px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      color: #000;
+      font-weight: 700;
+      border-radius: 24px;
+      text-decoration: none;
+    }
+    .contact-box a:hover { opacity: 0.85; }
+
+    .admob-notice {
+      background: linear-gradient(135deg, #0d1117, #1a1a0d);
+      border: 1px solid #333;
+      border-left: 4px solid var(--accent2);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+    }
+    .admob-notice h3 { color: var(--accent2); margin-bottom: 10px; }
+    .admob-notice ul { padding-left: 18px; color: #bbb; }
+    .admob-notice ul li { margin-bottom: 6px; font-size: 0.9rem; }
+
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      color: var(--muted);
+      font-size: 0.8rem;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Language sections */
+    .lang-ko, .lang-en { display: none; }
+    .lang-ko.active, .lang-en.active { display: block; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">💡</div>
+  <h1>LED Board</h1>
+  <p>Support &nbsp;|&nbsp; 고객 지원</p>
+</header>
+
+<div class="lang-switch">
+  <button class="active" onclick="setLang('ko')">한국어</button>
+  <button onclick="setLang('en')">English</button>
+</div>
+
+<main>
+
+  <!-- ===================== KOREAN ===================== -->
+  <div class="lang-ko active">
+
+    <div class="section">
+      <h2>📱 앱 소개</h2>
+      <p>
+        <strong>LED Board</strong>는 스마트폰 화면을 LED 전광판으로 변신시켜 주는 앱입니다.<br>
+        콘서트, 팬미팅, 스포츠 응원, 파티 등 다양한 상황에서 나만의 메시지를 화려하게 표시하세요.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>✨ 주요 기능</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">➡️</div>
+          <h3>텍스트 스크롤</h3>
+          <p>좌·우·위·아래·정지 5가지 방향 지원</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🎨</div>
+          <h3>색상 커스터마이징</h3>
+          <p>텍스트·배경 색상을 자유롭게 변경</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🌈</div>
+          <h3>그라디언트 효과</h3>
+          <p>화려한 그라디언트 색상 적용</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>속도 조절</h3>
+          <p>스크롤 속도를 원하는 대로 조절</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔤</div>
+          <h3>글자 크기</h3>
+          <p>화면에 맞는 글자 크기 설정</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">😊</div>
+          <h3>이모지 지원</h3>
+          <p>이모지 포함 모든 문자 지원</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔄</div>
+          <h3>화면 회전</h3>
+          <p>세로·가로 모드 자유 전환</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">💾</div>
+          <h3>메시지 저장</h3>
+          <p>자주 쓰는 메시지 저장·불러오기</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>❓ 자주 묻는 질문 (FAQ)</h2>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">앱을 사용하려면 인터넷이 필요한가요?</div>
+        <div class="faq-a">아니요. LED Board의 핵심 기능은 모두 오프라인에서 작동합니다. 인터넷 연결 없이도 텍스트 스크롤, 색상 설정, 메시지 저장 등 모든 기능을 사용할 수 있습니다. 다만, 광고 표시를 위해서는 인터넷 연결이 필요할 수 있습니다.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">전광판 화면에서 화면이 꺼지는 현상이 있어요.</div>
+        <div class="faq-a">전광판 디스플레이 화면에서는 자동 잠금이 해제되도록 설계되어 있습니다. 만약 화면이 꺼진다면, 기기의 배터리 절약 설정이 앱의 기능을 제한하고 있을 수 있습니다. 기기 설정 &gt; 디스플레이에서 자동 잠금 시간을 늘려보세요.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">이모지가 표시되지 않거나 깨져 보여요.</div>
+        <div class="faq-a">이모지는 iOS 시스템 폰트를 통해 표시됩니다. 일부 특수 이모지나 조합형 이모지는 시스템 버전에 따라 표시가 다를 수 있습니다. iOS 최신 버전으로 업데이트 후 다시 시도해 보세요.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">가로 모드로 전환이 안 돼요.</div>
+        <div class="faq-a">기기의 화면 회전 잠금이 켜져 있을 수 있습니다. 제어 센터에서 화면 회전 잠금을 해제한 후 기기를 가로로 돌리면 전환됩니다.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">저장한 메시지가 삭제됐어요.</div>
+        <div class="faq-a">저장된 메시지는 앱 내 로컬 저장소에 보관됩니다. 앱을 완전히 삭제하거나 기기를 초기화하면 저장 데이터가 삭제될 수 있습니다. 중요한 메시지는 별도로 기록해 두시길 권장합니다.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">광고가 너무 많이 표시됩니다.</div>
+        <div class="faq-a">현재 버전은 Google AdMob 배너 및 전면 광고를 포함하고 있습니다. 광고 빈도에 대한 피드백은 아래 이메일로 보내주시면 개선에 반영하겠습니다.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📢 광고 정책 안내 (AdMob)</h2>
+      <div class="admob-notice">
+        <h3>Google AdMob 광고 안내</h3>
+        <ul>
+          <li>본 앱은 Google AdMob을 통해 배너 및 전면(전환) 광고를 표시합니다.</li>
+          <li>광고 표시를 위해 광고 ID(IDFA)가 수집될 수 있으며, 최초 앱 실행 시 Apple ATT(앱 추적 투명성) 동의를 요청합니다.</li>
+          <li>추적을 거부하셔도 앱의 모든 핵심 기능은 정상적으로 이용할 수 있습니다.</li>
+          <li>광고를 통해 수집된 데이터는 Google의 개인정보처리방침을 따릅니다.</li>
+          <li>광고 관련 문의 또는 부적절한 광고 신고는 아래 이메일로 연락해 주세요.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📧 문의하기</h2>
+      <div class="contact-box">
+        <p>앱 사용 중 불편한 점이나 개선 요청 사항이 있으시면 이메일로 연락해 주세요.<br>
+        빠른 시일 내에 답변드리겠습니다.</p>
+        <a href="mailto:kr.chis@gmail.com">kr.chis@gmail.com</a>
+      </div>
+    </div>
+
+  </div><!-- /.lang-ko -->
+
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div class="lang-en">
+
+    <div class="section">
+      <h2>📱 About the App</h2>
+      <p>
+        <strong>LED Board</strong> transforms your smartphone screen into a brilliant LED marquee display.<br>
+        Perfect for concerts, fan meetings, sports events, parties, and any occasion where you want to show off a message in style.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>✨ Key Features</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon">➡️</div>
+          <h3>Scrolling Text</h3>
+          <p>5 directions: left, right, up, down, and static</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🎨</div>
+          <h3>Color Customization</h3>
+          <p>Freely change text and background colors</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🌈</div>
+          <h3>Gradient Effects</h3>
+          <p>Apply vibrant gradient colors</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">⚡</div>
+          <h3>Speed Control</h3>
+          <p>Adjust scroll speed to your liking</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔤</div>
+          <h3>Font Size</h3>
+          <p>Set the font size to fit your screen</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">😊</div>
+          <h3>Emoji Support</h3>
+          <p>Full support for emoji and all characters</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">🔄</div>
+          <h3>Screen Rotation</h3>
+          <p>Switch freely between portrait and landscape</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon">💾</div>
+          <h3>Save Messages</h3>
+          <p>Save and recall your favorite messages</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>❓ Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Does the app require an internet connection?</div>
+        <div class="faq-a">No. All core features of LED Board work offline. You can use scrolling text, color settings, and message saving without an internet connection. An internet connection may be needed for loading advertisements.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">The screen turns off while the display is active.</div>
+        <div class="faq-a">The app is designed to keep the screen on while the LED display is active. If the screen still turns off, your device's battery saving settings may be overriding the app's behavior. Try increasing the auto-lock duration in Settings &gt; Display &amp; Brightness.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">Emoji aren't displaying or look broken.</div>
+        <div class="faq-a">Emoji are rendered using the iOS system font. Some complex or combined emoji may display differently depending on your iOS version. Try updating to the latest iOS version and try again.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">The screen won't switch to landscape mode.</div>
+        <div class="faq-a">Your device's portrait orientation lock may be enabled. Open Control Center and disable the orientation lock, then rotate your device.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">My saved messages disappeared.</div>
+        <div class="faq-a">Saved messages are stored in the app's local storage. Uninstalling the app or resetting your device will delete saved data. We recommend keeping a copy of important messages elsewhere.</div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">There are too many ads.</div>
+        <div class="faq-a">The current version includes Google AdMob banner and interstitial ads. If you have feedback about ad frequency, please send us an email at the address below and we'll work to improve the experience.</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📢 Advertising Notice (AdMob)</h2>
+      <div class="admob-notice">
+        <h3>Google AdMob Advertising</h3>
+        <ul>
+          <li>This app displays banner and interstitial ads via Google AdMob.</li>
+          <li>The advertising identifier (IDFA) may be collected for ad serving. The app requests Apple ATT (App Tracking Transparency) consent on first launch.</li>
+          <li>Declining tracking does not affect any core app functionality.</li>
+          <li>Data collected through ads is governed by Google's Privacy Policy.</li>
+          <li>For ad-related inquiries or to report inappropriate ads, please contact us via email below.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>📧 Contact Us</h2>
+      <div class="contact-box">
+        <p>If you experience any issues or have suggestions for improvement,<br>
+        please reach out by email. We'll get back to you as soon as possible.</p>
+        <a href="mailto:kr.chis@gmail.com">kr.chis@gmail.com</a>
+      </div>
+    </div>
+
+  </div><!-- /.lang-en -->
+
+</main>
+
+<footer>
+  <p>LED Board &nbsp;|&nbsp; Bundle ID: com.krchis.ledboard &nbsp;|&nbsp; kr.chis@gmail.com</p>
+  <p style="margin-top:6px;">© 2025 choiinseok. All rights reserved.</p>
+</footer>
+
+<script>
+  function setLang(lang) {
+    document.querySelectorAll('.lang-ko, .lang-en').forEach(el => el.classList.remove('active'));
+    document.querySelector('.lang-' + lang).classList.add('active');
+    document.querySelectorAll('.lang-switch button').forEach((btn, i) => {
+      btn.classList.toggle('active', (lang === 'ko' && i === 0) || (lang === 'en' && i === 1));
+    });
+  }
+  function toggleFaq(el) {
+    el.parentElement.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
