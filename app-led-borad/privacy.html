@@ -84,15 +84,10 @@
       margin-bottom: 14px;
       padding-bottom: 8px;
       border-bottom: 1px solid var(--border);
-      counter-increment: section;
     }
     .policy-section p { color: #ccc; margin-bottom: 12px; }
-    .policy-section ul, .policy-section ol {
-      padding-left: 20px;
-      color: #bbb;
-      margin-bottom: 12px;
-    }
-    .policy-section ul li, .policy-section ol li { margin-bottom: 8px; }
+    .policy-section ul { padding-left: 20px; color: #bbb; margin-bottom: 12px; }
+    .policy-section ul li { margin-bottom: 8px; }
 
     .highlight-box {
       background: var(--card);
@@ -100,16 +95,9 @@
       border-radius: var(--radius);
       padding: 20px 24px;
       margin: 16px 0;
+      border-left: 4px solid var(--accent);
     }
-    .highlight-box.admob {
-      border-left: 4px solid var(--accent2);
-      background: linear-gradient(135deg, #0d1117, #1a1a0d);
-    }
-    .highlight-box h3 { color: var(--accent2); margin-bottom: 10px; font-size: 1rem; }
-    .highlight-box ul { padding-left: 18px; color: #bbb; }
-    .highlight-box ul li { margin-bottom: 6px; font-size: 0.9rem; }
-    .highlight-box a { color: var(--accent); text-decoration: none; }
-    .highlight-box a:hover { text-decoration: underline; }
+    .highlight-box p { color: var(--text); font-weight: 600; margin-bottom: 0; }
 
     table {
       width: 100%;
@@ -177,126 +165,64 @@
 
 <main>
 
-  <!-- ===================== KOREAN ===================== -->
   <div class="lang-ko active">
 
     <div class="effective-date">
-      📅 시행일: 2025년 1월 1일 &nbsp;|&nbsp; 최종 업데이트: 2025년 1월 1일
+      📅 시행일: 2026년 4월 20일 &nbsp;|&nbsp; 최종 업데이트: 2026년 4월 20일
     </div>
 
     <div class="policy-section">
-      <h2>1. 개인정보처리방침 개요</h2>
+      <h2>1. 개요</h2>
       <p>
-        <strong>LED Board</strong>(이하 "앱")는 choiinseok(이하 "개발자")이 개발·운영하는 iOS 모바일 애플리케이션입니다.<br>
-        본 개인정보처리방침은 앱이 수집하는 정보의 종류, 사용 방법, 보호 방법에 대해 설명합니다.
+        <strong>LED Board</strong>(이하 "앱")는 사용자의 프라이버시를 최우선으로 하며, 어떠한 개인정보도 서버로 전송하지 않는 <strong>독립 실행형(Standalone) 애플리케이션</strong>입니다.
       </p>
-      <p>앱을 사용하면 본 방침에 동의하는 것으로 간주됩니다.</p>
+      <div class="highlight-box">
+        <p>본 앱은 광고를 포함하지 않으며, 사용자의 데이터를 수집, 공유 또는 판매하지 않습니다.</p>
+      </div>
     </div>
 
     <div class="policy-section">
       <h2>2. 수집하는 정보</h2>
-      <p>LED Board는 다음과 같이 최소한의 정보만 처리합니다.</p>
+      <p>LED Board는 서비스 제공을 위해 기기 내에서만 작동하는 최소한의 정보만 처리합니다.</p>
 
       <table>
         <thead>
           <tr><th>항목</th><th>수집 여부</th><th>용도</th><th>보관 위치</th></tr>
         </thead>
         <tbody>
-          <tr><td>이름, 이메일 등 개인식별정보</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
-          <tr><td>위치 정보</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
-          <tr><td>카메라/마이크</td><td>❌ 미사용</td><td>-</td><td>-</td></tr>
-          <tr><td>저장된 메시지</td><td>✅ 로컬 저장</td><td>메시지 저장·불러오기</td><td>기기 내부</td></tr>
-          <tr><td>앱 설정값</td><td>✅ 로컬 저장</td><td>사용자 설정 유지</td><td>기기 내부</td></tr>
-          <tr><td>광고 식별자(IDFA)</td><td>✅ (선택)</td><td>맞춤형 광고 제공</td><td>Google AdMob</td></tr>
-          <tr><td>광고 성과 데이터</td><td>✅ (선택)</td><td>광고 노출·클릭 분석</td><td>Google AdMob</td></tr>
+          <tr><td>개인식별정보 (이름, 이메일 등)</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
+          <tr><td>기기 식별자 및 광고 ID (IDFA)</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
+          <tr><td>위치 정보 및 연락처</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
+          <tr><td>메시지 기록 및 설정값</td><td>✅ 로컬 전용</td><td>사용자 편의 기능</td><td>기기 내부</td></tr>
         </tbody>
       </table>
 
-      <p>로컬 저장 데이터(메시지, 설정)는 외부로 전송되지 않으며, 앱을 삭제하면 함께 삭제됩니다.</p>
+      <p>기기에 저장되는 데이터(메시지 내용, 색상 설정 등)는 외부 서버로 전송되지 않으며, 개발자가 접근할 수 없습니다.</p>
     </div>
 
     <div class="policy-section">
-      <h2>3. 광고 및 Google AdMob</h2>
-      <div class="highlight-box admob">
-        <h3>📢 Google AdMob 광고 서비스 안내</h3>
-        <ul>
-          <li>본 앱은 <strong>Google AdMob</strong>을 통해 배너 광고 및 전면(전환) 광고를 표시합니다.</li>
-          <li>광고 서비스 제공을 위해 <strong>광고 식별자(IDFA)</strong> 및 기기 정보가 Google에 전송될 수 있습니다.</li>
-          <li>앱 최초 실행 시 <strong>Apple ATT(앱 추적 투명성)</strong> 동의 팝업이 표시됩니다.</li>
-          <li>ATT에 동의하면 맞춤형 광고가, 거부하면 비맞춤형 광고가 표시됩니다.</li>
-          <li>광고 추적 거부 시에도 앱의 모든 핵심 기능은 정상 이용 가능합니다.</li>
-          <li>Google AdMob의 데이터 처리에 대한 자세한 내용은 아래를 참조하세요.</li>
-        </ul>
-        <p style="margin-top:12px; font-size:0.85rem;">
-          🔗 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>
-          &nbsp;|&nbsp;
-          🔗 <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob 데이터 처리 안내</a>
-        </p>
-      </div>
+      <h2>3. 데이터 보관 및 삭제</h2>
+      <p>
+        모든 데이터는 사용자의 기기 내 보안 저장소에만 보관됩니다. 사용자가 <strong>앱을 삭제하면 기기에 저장된 모든 데이터는 즉시 영구 파기</strong>됩니다.
+      </p>
     </div>
 
     <div class="policy-section">
-      <h2>4. 제3자 서비스</h2>
-      <p>본 앱은 아래 제3자 서비스를 사용합니다. 각 서비스의 개인정보처리방침에 따라 데이터가 처리될 수 있습니다.</p>
-
-      <div class="highlight-box">
-        <table>
-          <thead><tr><th>서비스</th><th>제공사</th><th>목적</th><th>개인정보처리방침</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Google AdMob</td>
-              <td>Google LLC</td>
-              <td>광고 표시</td>
-              <td><a href="https://policies.google.com/privacy" target="_blank">보기</a></td>
-            </tr>
-            <tr>
-              <td>Expo (React Native)</td>
-              <td>Expo Inc.</td>
-              <td>앱 프레임워크</td>
-              <td><a href="https://expo.dev/privacy" target="_blank">보기</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <h2>4. 제3자 서비스 및 광고</h2>
+      <p>
+        본 앱은 광고(Google AdMob 등)나 타사 분석 도구를 포함하고 있지 않습니다. 따라서 어떠한 정보도 제3자에게 제공하거나 위탁하지 않습니다.
+      </p>
     </div>
 
     <div class="policy-section">
       <h2>5. 아동 개인정보 보호</h2>
       <p>
-        본 앱은 13세 미만 아동을 대상으로 하지 않습니다.<br>
-        아동의 개인정보를 의도적으로 수집하지 않으며, 만약 아동의 개인정보가 수집된 사실을 발견하면 즉시 삭제하겠습니다.<br>
-        관련 사항을 알고 계신다면 아래 이메일로 알려주세요.
+        본 앱은 전 연령이 이용 가능하며, 개인정보를 수집하지 않으므로 13세 미만 아동의 데이터를 부적절하게 처리할 위험이 없습니다.
       </p>
     </div>
 
     <div class="policy-section">
-      <h2>6. 데이터 보안</h2>
-      <p>
-        기기 내 저장 데이터는 iOS의 샌드박스 보안 정책에 의해 보호됩니다.<br>
-        광고 관련 데이터는 Google AdMob의 보안 정책에 따라 처리됩니다.<br>
-        개발자는 불필요한 데이터를 수집하지 않는 것을 원칙으로 합니다.
-      </p>
-    </div>
-
-    <div class="policy-section">
-      <h2>7. 사용자 권리</h2>
-      <ul>
-        <li><strong>광고 추적 거부</strong>: 기기 설정 &gt; 개인정보 보호 &gt; 추적에서 앱별 추적 권한을 변경할 수 있습니다.</li>
-        <li><strong>로컬 데이터 삭제</strong>: 앱을 삭제하면 기기에 저장된 모든 데이터가 삭제됩니다.</li>
-        <li><strong>광고 식별자 초기화</strong>: 기기 설정에서 광고 식별자를 초기화할 수 있습니다.</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>8. 방침 변경</h2>
-      <p>
-        본 개인정보처리방침은 법령 변경 또는 서비스 개선에 따라 수정될 수 있습니다.<br>
-        변경 시 앱 업데이트 노트 또는 본 페이지를 통해 공지하며, 변경일로부터 효력이 발생합니다.
-      </p>
-    </div>
-
-    <div class="policy-section">
-      <h2>9. 문의</h2>
+      <h2>6. 문의</h2>
       <div class="contact-box">
         <p>개인정보처리방침에 관한 문의 사항이 있으시면 이메일로 연락해 주세요.</p>
         <p style="margin-top:10px; color: var(--muted); font-size:0.9rem;">
@@ -306,129 +232,64 @@
       </div>
     </div>
 
-  </div><!-- /.lang-ko -->
-
-
-  <!-- ===================== ENGLISH ===================== -->
-  <div class="lang-en">
+  </div><div class="lang-en">
 
     <div class="effective-date">
-      📅 Effective Date: January 1, 2025 &nbsp;|&nbsp; Last Updated: January 1, 2025
+      📅 Effective Date: April 20, 2026 &nbsp;|&nbsp; Last Updated: April 20, 2026
     </div>
 
     <div class="policy-section">
       <h2>1. Overview</h2>
       <p>
-        <strong>LED Board</strong> (the "App") is an iOS mobile application developed and operated by choiinseok (the "Developer").<br>
-        This Privacy Policy explains what information the App collects, how it is used, and how it is protected.
+        <strong>LED Board</strong> (the "App") is a <strong>standalone application</strong> that prioritizes user privacy and does not transmit any personal data to any server.
       </p>
-      <p>By using the App, you agree to this Privacy Policy.</p>
+      <div class="highlight-box">
+        <p>This App does not include advertisements and does not collect, share, or sell your data.</p>
+      </div>
     </div>
 
     <div class="policy-section">
       <h2>2. Information We Collect</h2>
-      <p>LED Board processes only the minimum information necessary.</p>
+      <p>LED Board processes only the minimum information necessary to function locally on your device.</p>
 
       <table>
         <thead>
           <tr><th>Data Type</th><th>Collected</th><th>Purpose</th><th>Storage</th></tr>
         </thead>
         <tbody>
-          <tr><td>Personal identifiers (name, email, etc.)</td><td>❌ No</td><td>-</td><td>-</td></tr>
-          <tr><td>Location data</td><td>❌ No</td><td>-</td><td>-</td></tr>
-          <tr><td>Camera / Microphone</td><td>❌ Not used</td><td>-</td><td>-</td></tr>
-          <tr><td>Saved messages</td><td>✅ Local only</td><td>Save &amp; recall messages</td><td>On-device</td></tr>
-          <tr><td>App settings</td><td>✅ Local only</td><td>Persist user preferences</td><td>On-device</td></tr>
-          <tr><td>Advertising ID (IDFA)</td><td>✅ Optional</td><td>Personalized ads</td><td>Google AdMob</td></tr>
-          <tr><td>Ad performance data</td><td>✅ Optional</td><td>Ad impression/click analytics</td><td>Google AdMob</td></tr>
+          <tr><td>Personal Identifiers (Name, Email, etc.)</td><td>❌ No</td><td>-</td><td>-</td></tr>
+          <tr><td>Device Identifiers / Ad ID (IDFA)</td><td>❌ No</td><td>-</td><td>-</td></tr>
+          <tr><td>Location / Contacts</td><td>❌ No</td><td>-</td><td>-</td></tr>
+          <tr><td>Messages & App Settings</td><td>✅ Local Only</td><td>User Convenience</td><td>On-device</td></tr>
         </tbody>
       </table>
 
-      <p>Locally stored data (messages and settings) is never transmitted externally and is deleted when the app is uninstalled.</p>
+      <p>Data stored on the device (message content, color settings, etc.) is never transmitted externally and is inaccessible to the developer.</p>
     </div>
 
     <div class="policy-section">
-      <h2>3. Advertising &amp; Google AdMob</h2>
-      <div class="highlight-box admob">
-        <h3>📢 Google AdMob Advertising</h3>
-        <ul>
-          <li>This app displays <strong>banner ads and interstitial ads</strong> via <strong>Google AdMob</strong>.</li>
-          <li>The <strong>Advertising Identifier (IDFA)</strong> and device information may be sent to Google for ad serving purposes.</li>
-          <li>On first launch, the app will present an <strong>Apple ATT (App Tracking Transparency)</strong> consent dialog.</li>
-          <li>If you consent, personalized ads will be shown. If you decline, non-personalized ads will be shown instead.</li>
-          <li>Declining ad tracking does not affect any core app functionality.</li>
-          <li>For details on how Google processes this data, see the links below.</li>
-        </ul>
-        <p style="margin-top:12px; font-size:0.85rem;">
-          🔗 <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>
-          &nbsp;|&nbsp;
-          🔗 <a href="https://support.google.com/admob/answer/6128543" target="_blank">AdMob Data Processing</a>
-        </p>
-      </div>
+      <h2>3. Data Retention & Deletion</h2>
+      <p>
+        All data is kept only in the secure local storage of your device. <strong>When you uninstall the App, all locally stored data is permanently deleted immediately.</strong>
+      </p>
     </div>
 
     <div class="policy-section">
-      <h2>4. Third-Party Services</h2>
-      <p>This app uses the following third-party services. Data may be processed according to each service's privacy policy.</p>
-
-      <div class="highlight-box">
-        <table>
-          <thead><tr><th>Service</th><th>Provider</th><th>Purpose</th><th>Privacy Policy</th></tr></thead>
-          <tbody>
-            <tr>
-              <td>Google AdMob</td>
-              <td>Google LLC</td>
-              <td>Ad serving</td>
-              <td><a href="https://policies.google.com/privacy" target="_blank">View</a></td>
-            </tr>
-            <tr>
-              <td>Expo (React Native)</td>
-              <td>Expo Inc.</td>
-              <td>App framework</td>
-              <td><a href="https://expo.dev/privacy" target="_blank">View</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <h2>4. Third-Party Services & Advertising</h2>
+      <p>
+        This App does not contain advertisements (e.g., Google AdMob) or third-party analytics tools. We do not provide or entrust any information to third parties.
+      </p>
     </div>
 
     <div class="policy-section">
       <h2>5. Children's Privacy</h2>
       <p>
-        This app is not directed at children under the age of 13.<br>
-        We do not knowingly collect personal information from children. If we become aware that a child has provided personal information, we will delete it immediately.<br>
-        If you have reason to believe this has occurred, please contact us via the email below.
+        This App is suitable for all ages. Since we do not collect personal information, there is no risk of inappropriately handling data from children under 13.
       </p>
     </div>
 
     <div class="policy-section">
-      <h2>6. Data Security</h2>
-      <p>
-        Data stored on your device is protected by iOS's sandboxing security model.<br>
-        Ad-related data is processed under Google AdMob's security policies.<br>
-        The Developer's principle is to collect no unnecessary data.
-      </p>
-    </div>
-
-    <div class="policy-section">
-      <h2>7. Your Rights</h2>
-      <ul>
-        <li><strong>Opt out of ad tracking</strong>: Go to Settings &gt; Privacy &amp; Security &gt; Tracking to change per-app tracking permissions.</li>
-        <li><strong>Delete local data</strong>: Uninstalling the app removes all locally stored data from your device.</li>
-        <li><strong>Reset Advertising ID</strong>: You can reset your Advertising Identifier in device Settings.</li>
-      </ul>
-    </div>
-
-    <div class="policy-section">
-      <h2>8. Changes to This Policy</h2>
-      <p>
-        This Privacy Policy may be updated due to changes in law or service improvements.<br>
-        Changes will be announced through app update notes or on this page, and will take effect on the date of the change.
-      </p>
-    </div>
-
-    <div class="policy-section">
-      <h2>9. Contact</h2>
+      <h2>6. Contact</h2>
       <div class="contact-box">
         <p>If you have any questions about this Privacy Policy, please contact us by email.</p>
         <p style="margin-top:10px; color: var(--muted); font-size:0.9rem;">
@@ -438,13 +299,11 @@
       </div>
     </div>
 
-  </div><!-- /.lang-en -->
-
-</main>
+  </div></main>
 
 <footer>
   <p>LED Board &nbsp;|&nbsp; Bundle ID: com.krchis.ledboard &nbsp;|&nbsp; kr.chis@gmail.com</p>
-  <p style="margin-top:6px;">© 2025 choiinseok. All rights reserved.</p>
+  <p style="margin-top:6px;">© 2026 choiinseok. All rights reserved.</p>
 </footer>
 
 <script>
