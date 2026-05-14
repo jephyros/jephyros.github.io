@@ -99,6 +99,18 @@
     }
     .highlight-box p { color: var(--text); font-weight: 600; margin-bottom: 0; }
 
+    .admob-box {
+      background: #1a1200;
+      border: 1px solid #3a2e00;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 16px 0;
+      border-left: 4px solid var(--accent2);
+    }
+    .admob-box p { color: #e0c96e; margin-bottom: 8px; }
+    .admob-box p:last-child { margin-bottom: 0; }
+    .admob-box a { color: var(--accent2); }
+
     table {
       width: 100%;
       border-collapse: collapse;
@@ -165,25 +177,26 @@
 
 <main>
 
+  <!-- ===== 한국어 ===== -->
   <div class="lang-ko active">
 
     <div class="effective-date">
-      📅 시행일: 2026년 4월 20일 &nbsp;|&nbsp; 최종 업데이트: 2026년 4월 20일
+      📅 시행일: 2026년 5월 14일 &nbsp;|&nbsp; 최종 업데이트: 2026년 5월 14일
     </div>
 
     <div class="policy-section">
       <h2>1. 개요</h2>
       <p>
-        <strong>LED Board</strong>(이하 "앱")는 사용자의 프라이버시를 최우선으로 하며, 어떠한 개인정보도 서버로 전송하지 않는 <strong>독립 실행형(Standalone) 애플리케이션</strong>입니다.
+        <strong>LED Board</strong>(이하 "앱")는 사용자의 프라이버시를 최우선으로 하는 <strong>독립 실행형(Standalone) 애플리케이션</strong>입니다. 앱 내 광고(Google AdMob) 운영을 위해 최소한의 정보가 제3자(Google)에 의해 처리될 수 있으며, 본 방침에서 이를 투명하게 안내합니다.
       </p>
       <div class="highlight-box">
-        <p>본 앱은 광고를 포함하지 않으며, 사용자의 데이터를 수집, 공유 또는 판매하지 않습니다.</p>
+        <p>본 앱은 광고 운영 이외의 목적으로 개인정보를 수집, 공유 또는 판매하지 않습니다.</p>
       </div>
     </div>
 
     <div class="policy-section">
       <h2>2. 수집하는 정보</h2>
-      <p>LED Board는 서비스 제공을 위해 기기 내에서만 작동하는 최소한의 정보만 처리합니다.</p>
+      <p>LED Board는 서비스 제공을 위해 기기 내에서만 작동하는 최소한의 정보만 처리합니다. 단, 광고 제공을 위해 Google AdMob이 아래 항목을 수집할 수 있습니다.</p>
 
       <table>
         <thead>
@@ -191,8 +204,10 @@
         </thead>
         <tbody>
           <tr><td>개인식별정보 (이름, 이메일 등)</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
-          <tr><td>기기 식별자 및 광고 ID (IDFA)</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
-          <tr><td>위치 정보 및 연락처</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
+          <tr><td>기기 식별자 (IDFA / GAID)</td><td>⚠️ AdMob 수집</td><td>맞춤 광고 제공</td><td>Google 서버</td></tr>
+          <tr><td>대략적인 위치 (IP 기반)</td><td>⚠️ AdMob 수집</td><td>지역 광고 타겟팅</td><td>Google 서버</td></tr>
+          <tr><td>앱 사용 이벤트 (광고 노출/클릭)</td><td>⚠️ AdMob 수집</td><td>광고 성과 측정</td><td>Google 서버</td></tr>
+          <tr><td>위치 정보 (GPS) 및 연락처</td><td>❌ 미수집</td><td>-</td><td>-</td></tr>
           <tr><td>메시지 기록 및 설정값</td><td>✅ 로컬 전용</td><td>사용자 편의 기능</td><td>기기 내부</td></tr>
         </tbody>
       </table>
@@ -203,21 +218,40 @@
     <div class="policy-section">
       <h2>3. 데이터 보관 및 삭제</h2>
       <p>
-        모든 데이터는 사용자의 기기 내 보안 저장소에만 보관됩니다. 사용자가 <strong>앱을 삭제하면 기기에 저장된 모든 데이터는 즉시 영구 파기</strong>됩니다.
+        앱 자체적으로 수집한 모든 데이터는 사용자의 기기 내 보안 저장소에만 보관됩니다. 사용자가 <strong>앱을 삭제하면 기기에 저장된 모든 데이터는 즉시 영구 파기</strong>됩니다.
+      </p>
+      <p>
+        Google AdMob이 수집한 데이터의 보관 및 삭제 정책은 Google의 개인정보처리방침을 따릅니다.
       </p>
     </div>
 
     <div class="policy-section">
-      <h2>4. 제3자 서비스 및 광고</h2>
+      <h2>4. 광고 (Google AdMob)</h2>
       <p>
-        본 앱은 광고(Google AdMob 등)나 타사 분석 도구를 포함하고 있지 않습니다. 따라서 어떠한 정보도 제3자에게 제공하거나 위탁하지 않습니다.
+        본 앱은 <strong>Google AdMob</strong>을 통해 광고를 제공합니다. Google AdMob은 광고 관련성을 높이기 위해 기기 식별자, 대략적인 위치 등의 정보를 수집할 수 있으며, 이는 Google의 개인정보처리방침에 따라 처리됩니다.
       </p>
+
+      <div class="admob-box">
+        <p>📋 <strong>Google 개인정보처리방침:</strong><br>
+          <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+        </p>
+        <p>📋 <strong>AdMob 파트너 정책:</strong><br>
+          <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a>
+        </p>
+      </div>
+
+      <p><strong>광고 개인화 거부(옵트아웃) 방법:</strong></p>
+      <ul>
+        <li><strong>iOS:</strong> 설정 → 개인정보 보호 및 보안 → 추적 → "앱이 추적을 요청하도록 허용" 비활성화</li>
+        <li><strong>Android:</strong> 설정 → Google → 광고 → "광고 개인화 선택 해제" 또는 "광고 ID 재설정"</li>
+        <li>앱 최초 실행 시 광고 추적 동의 여부를 묻는 팝업(ATT)이 표시될 수 있습니다. 동의하지 않을 경우 비개인화 광고가 표시됩니다.</li>
+      </ul>
     </div>
 
     <div class="policy-section">
       <h2>5. 아동 개인정보 보호</h2>
       <p>
-        본 앱은 전 연령이 이용 가능하며, 개인정보를 수집하지 않으므로 13세 미만 아동의 데이터를 부적절하게 처리할 위험이 없습니다.
+        본 앱은 전 연령이 이용 가능하며, 개발자는 어린이를 대상으로 하는 개인정보를 직접 수집하지 않습니다. 다만, Google AdMob의 광고 정책에 따라 아동 대상 앱 설정이 적용될 수 있습니다.
       </p>
     </div>
 
@@ -232,25 +266,28 @@
       </div>
     </div>
 
-  </div><div class="lang-en">
+  </div>
+
+  <!-- ===== English ===== -->
+  <div class="lang-en">
 
     <div class="effective-date">
-      📅 Effective Date: April 20, 2026 &nbsp;|&nbsp; Last Updated: April 20, 2026
+      📅 Effective Date: May 14, 2026 &nbsp;|&nbsp; Last Updated: May 14, 2026
     </div>
 
     <div class="policy-section">
       <h2>1. Overview</h2>
       <p>
-        <strong>LED Board</strong> (the "App") is a <strong>standalone application</strong> that prioritizes user privacy and does not transmit any personal data to any server.
+        <strong>LED Board</strong> (the "App") is a <strong>standalone application</strong> that prioritizes user privacy. To serve in-app advertisements via Google AdMob, minimal information may be processed by a third party (Google). This policy transparently explains how that works.
       </p>
       <div class="highlight-box">
-        <p>This App does not include advertisements and does not collect, share, or sell your data.</p>
+        <p>This App does not collect, share, or sell personal data for any purpose other than serving ads.</p>
       </div>
     </div>
 
     <div class="policy-section">
       <h2>2. Information We Collect</h2>
-      <p>LED Board processes only the minimum information necessary to function locally on your device.</p>
+      <p>LED Board processes only the minimum information necessary to function locally on your device. Additionally, Google AdMob may collect the following data to serve advertisements.</p>
 
       <table>
         <thead>
@@ -258,9 +295,11 @@
         </thead>
         <tbody>
           <tr><td>Personal Identifiers (Name, Email, etc.)</td><td>❌ No</td><td>-</td><td>-</td></tr>
-          <tr><td>Device Identifiers / Ad ID (IDFA)</td><td>❌ No</td><td>-</td><td>-</td></tr>
-          <tr><td>Location / Contacts</td><td>❌ No</td><td>-</td><td>-</td></tr>
-          <tr><td>Messages & App Settings</td><td>✅ Local Only</td><td>User Convenience</td><td>On-device</td></tr>
+          <tr><td>Device Identifiers (IDFA / GAID)</td><td>⚠️ AdMob</td><td>Personalized ads</td><td>Google servers</td></tr>
+          <tr><td>Approximate Location (IP-based)</td><td>⚠️ AdMob</td><td>Regional ad targeting</td><td>Google servers</td></tr>
+          <tr><td>Ad Events (impressions / clicks)</td><td>⚠️ AdMob</td><td>Ad performance measurement</td><td>Google servers</td></tr>
+          <tr><td>Precise Location / Contacts</td><td>❌ No</td><td>-</td><td>-</td></tr>
+          <tr><td>Messages &amp; App Settings</td><td>✅ Local Only</td><td>User Convenience</td><td>On-device</td></tr>
         </tbody>
       </table>
 
@@ -268,23 +307,42 @@
     </div>
 
     <div class="policy-section">
-      <h2>3. Data Retention & Deletion</h2>
+      <h2>3. Data Retention &amp; Deletion</h2>
       <p>
-        All data is kept only in the secure local storage of your device. <strong>When you uninstall the App, all locally stored data is permanently deleted immediately.</strong>
+        All data collected by the App itself is kept only in the secure local storage of your device. <strong>When you uninstall the App, all locally stored data is permanently deleted immediately.</strong>
+      </p>
+      <p>
+        Data collected by Google AdMob is subject to Google's own data retention and deletion policies.
       </p>
     </div>
 
     <div class="policy-section">
-      <h2>4. Third-Party Services & Advertising</h2>
+      <h2>4. Advertising (Google AdMob)</h2>
       <p>
-        This App does not contain advertisements (e.g., Google AdMob) or third-party analytics tools. We do not provide or entrust any information to third parties.
+        This App uses <strong>Google AdMob</strong> to display advertisements. Google AdMob may collect device identifiers, approximate location, and other information to improve ad relevance. This data is handled in accordance with Google's Privacy Policy.
       </p>
+
+      <div class="admob-box">
+        <p>📋 <strong>Google Privacy Policy:</strong><br>
+          <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a>
+        </p>
+        <p>📋 <strong>AdMob Partner Policies:</strong><br>
+          <a href="https://support.google.com/admob/answer/6128543" target="_blank">https://support.google.com/admob/answer/6128543</a>
+        </p>
+      </div>
+
+      <p><strong>How to Opt Out of Personalized Ads:</strong></p>
+      <ul>
+        <li><strong>iOS:</strong> Settings → Privacy &amp; Security → Tracking → Disable "Allow Apps to Request to Track"</li>
+        <li><strong>Android:</strong> Settings → Google → Ads → "Opt out of Ads Personalization" or "Reset Advertising ID"</li>
+        <li>On first launch, an App Tracking Transparency (ATT) prompt may appear asking for your consent. If you decline, non-personalized ads will be shown instead.</li>
+      </ul>
     </div>
 
     <div class="policy-section">
       <h2>5. Children's Privacy</h2>
       <p>
-        This App is suitable for all ages. Since we do not collect personal information, there is no risk of inappropriately handling data from children under 13.
+        This App is suitable for all ages. The developer does not directly collect personal information from children. Google AdMob's child-directed treatment settings may be applied in accordance with applicable advertising policies.
       </p>
     </div>
 
@@ -299,7 +357,9 @@
       </div>
     </div>
 
-  </div></main>
+  </div>
+
+</main>
 
 <footer>
   <p>LED Board &nbsp;|&nbsp; Bundle ID: com.krchis.ledboard &nbsp;|&nbsp; kr.chis@gmail.com</p>
