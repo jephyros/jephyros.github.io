@@ -9,7 +9,7 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f5f5; color: #222; }
     header { background: var(--dark); color: #fff; padding: 32px 24px; }
-    header h1 { font-size: 1.6rem; }
+    header h1 { font-size: 1.6rem; font-weight: 600; }
     header p { font-size: 0.85rem; opacity: 0.75; margin-top: 4px; }
     .lang-switch { display: flex; gap: 8px; margin-top: 16px; }
     .lang-switch button { background: transparent; border: 1px solid rgba(255,255,255,0.5); color: #fff; border-radius: 4px; padding: 4px 14px; cursor: pointer; font-size: 0.85rem; }
@@ -21,6 +21,7 @@
     ul { padding-left: 20px; }
     li { margin-bottom: 4px; }
     a { color: var(--green); text-decoration: none; }
+    .new-badge { display: inline-block; background: #eaf7ef; color: #165834; font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
     .lang { display: none; }
     .lang.active { display: block; }
     footer { text-align: center; font-size: 0.8rem; color: #999; padding-bottom: 32px; }
@@ -29,7 +30,7 @@
 <body>
   <header>
     <h1>Habit Loop — Privacy Policy</h1>
-    <p>Last updated: May 1, 2025</p>
+    <p>Last updated: May 15, 2025</p>
     <div class="lang-switch">
       <button class="active" onclick="setLang('en')">English</button>
       <button onclick="setLang('ko')">한국어</button>
@@ -42,17 +43,30 @@
 
       <section>
         <h2>Overview</h2>
-        <p>Habit Loop ("we", "our", or "the app") is a habit-tracking application designed for personal productivity. We respect your privacy and are committed to protecting any information related to your use of the app. This policy explains how data is handled.</p>
+        <p>Habit Loop ("we", "our", or "the app") is a habit-tracking application designed for personal productivity. We respect your privacy and are committed to protecting any information related to your use of the app. This policy explains how data is handled, including data used by third-party advertising services.</p>
       </section>
 
       <section>
         <h2>Data We Collect</h2>
-        <p>Habit Loop does <strong>not</strong> collect, transmit, or store any personal information on external servers. All data you create in the app (habits, records, statistics) is stored <strong>locally on your device</strong> only.</p>
+        <p>All data you create in the app (habits, records, statistics) is stored <strong>locally on your device</strong> and is never transmitted to our servers.</p>
         <ul>
           <li>No account or sign-up is required.</li>
-          <li>No data is sent to our servers or any third-party servers.</li>
-          <li>No analytics SDKs or tracking libraries are embedded.</li>
+          <li>Your habit data is never sent to our servers or any third-party servers.</li>
+          <li>However, we use Google AdMob to display ads, which may collect certain device and usage data as described below.</li>
         </ul>
+      </section>
+
+      <section>
+        <h2>Advertising (Google AdMob) <span class="new-badge">Updated</span></h2>
+        <p>Habit Loop uses <strong>Google AdMob</strong> to display banner advertisements. AdMob may collect and use the following types of information to serve personalized or non-personalized ads:</p>
+        <ul>
+          <li>Device identifiers (e.g., IDFA / Advertising ID)</li>
+          <li>IP address and general location</li>
+          <li>App usage and interaction data</li>
+          <li>Device type, OS version, and language settings</li>
+        </ul>
+        <p style="margin-top:10px;">This data is collected and processed by Google LLC in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>. You can opt out of personalized advertising at any time via <strong>iOS Settings → Privacy &amp; Security → Apple Advertising</strong> or by enabling <strong>Limit Ad Tracking</strong>.</p>
+        <p style="margin-top:8px;">We comply with Apple's App Tracking Transparency (ATT) framework. Where required, the app will request your permission before allowing AdMob to use your Advertising ID for personalized ads.</p>
       </section>
 
       <section>
@@ -67,7 +81,12 @@
 
       <section>
         <h2>Children's Privacy</h2>
-        <p>Habit Loop does not knowingly collect information from children under 13. The app contains no age-gated features and collects no personal data from any user regardless of age.</p>
+        <p>Habit Loop is not directed at children under 13. We do not knowingly collect personal information from children under 13. AdMob is configured to serve non-personalized ads only in contexts where users may be under 13.</p>
+      </section>
+
+      <section>
+        <h2>Third-Party Links &amp; Services <span class="new-badge">New</span></h2>
+        <p>Ads displayed by AdMob may contain links to third-party websites or services. We are not responsible for the privacy practices or content of those third parties. We encourage you to review their privacy policies before providing any information.</p>
       </section>
 
       <section>
@@ -89,17 +108,30 @@
 
       <section>
         <h2>개요</h2>
-        <p>Habit Loop("앱", "서비스")는 개인 생산성을 위한 습관 트래킹 앱입니다. 저희는 사용자의 프라이버시를 존중하며, 앱 사용과 관련된 모든 정보를 보호하기 위해 최선을 다합니다. 본 개인정보처리방침은 데이터가 어떻게 처리되는지 설명합니다.</p>
+        <p>Habit Loop("앱", "서비스")는 개인 생산성을 위한 습관 트래킹 앱입니다. 저희는 사용자의 프라이버시를 존중하며, 앱 사용과 관련된 모든 정보를 보호하기 위해 최선을 다합니다. 본 개인정보처리방침은 앱 데이터 및 제3자 광고 서비스의 데이터 처리 방식을 설명합니다.</p>
       </section>
 
       <section>
         <h2>수집하는 데이터</h2>
-        <p>Habit Loop는 어떠한 개인정보도 외부 서버로 수집·전송·저장하지 <strong>않습니다</strong>. 앱에서 생성한 모든 데이터(습관, 기록, 통계)는 <strong>사용자의 기기에만</strong> 저장됩니다.</p>
+        <p>앱에서 생성한 모든 데이터(습관, 기록, 통계)는 <strong>사용자의 기기에만</strong> 저장되며 외부 서버로 전송되지 않습니다.</p>
         <ul>
           <li>계정 생성 또는 로그인이 필요하지 않습니다.</li>
-          <li>어떤 데이터도 외부 서버로 전송되지 않습니다.</li>
-          <li>분석 SDK나 추적 라이브러리가 포함되어 있지 않습니다.</li>
+          <li>습관 데이터는 저희 서버나 제3자 서버로 전송되지 않습니다.</li>
+          <li>단, 광고 게재를 위해 Google AdMob을 사용하며, 아래에 설명된 방식으로 일부 기기 및 사용 데이터가 수집될 수 있습니다.</li>
         </ul>
+      </section>
+
+      <section>
+        <h2>광고 (Google AdMob) <span class="new-badge">업데이트</span></h2>
+        <p>Habit Loop는 배너 광고 게재를 위해 <strong>Google AdMob</strong>을 사용합니다. AdMob은 맞춤형 또는 비맞춤형 광고를 제공하기 위해 다음과 같은 정보를 수집·사용할 수 있습니다.</p>
+        <ul>
+          <li>기기 식별자 (예: IDFA / 광고 ID)</li>
+          <li>IP 주소 및 대략적인 위치 정보</li>
+          <li>앱 사용 및 상호작용 데이터</li>
+          <li>기기 유형, OS 버전, 언어 설정</li>
+        </ul>
+        <p style="margin-top:10px;">해당 데이터는 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 Google LLC가 수집·처리합니다. <strong>iOS 설정 → 개인 정보 보호 및 보안 → Apple 광고</strong>에서 맞춤 광고 수신을 언제든지 거부할 수 있습니다.</p>
+        <p style="margin-top:8px;">저희 앱은 Apple의 앱 추적 투명성(ATT) 프레임워크를 준수합니다. 필요한 경우, AdMob이 광고 ID를 사용하기 전에 사용자의 동의를 요청합니다.</p>
       </section>
 
       <section>
@@ -114,7 +146,12 @@
 
       <section>
         <h2>아동 개인정보</h2>
-        <p>Habit Loop는 만 13세 미만 아동으로부터 의도적으로 정보를 수집하지 않습니다. 앱은 연령 제한 기능이 없으며, 연령에 관계없이 어떤 사용자의 개인정보도 수집하지 않습니다.</p>
+        <p>Habit Loop는 만 13세 미만 아동을 대상으로 하지 않으며, 아동으로부터 의도적으로 개인정보를 수집하지 않습니다. 만 13세 미만이 사용하는 환경에서는 비맞춤형 광고만 게재되도록 AdMob을 설정합니다.</p>
+      </section>
+
+      <section>
+        <h2>제3자 링크 및 서비스 <span class="new-badge">신규</span></h2>
+        <p>AdMob이 게재하는 광고에는 제3자 웹사이트 또는 서비스로의 링크가 포함될 수 있습니다. 저희는 해당 제3자의 개인정보 처리 방식이나 콘텐츠에 대해 책임지지 않습니다. 정보를 제공하기 전에 해당 서비스의 개인정보처리방침을 확인하시기 바랍니다.</p>
       </section>
 
       <section>
