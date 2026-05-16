@@ -103,39 +103,54 @@
   <button onclick="setLang('en')" id="btn-en">English</button>
 </div>
 
+<!-- ── 한국어 ── -->
 <div id="content-ko" class="container">
-  <p class="updated">최종 업데이트: 2026년 4월</p>
+  <p class="updated">최종 업데이트: 2026년 5월</p>
 
   <div class="section">
     <h2>1. 개요</h2>
-    <p>Study Timer(이하 "앱")는 사용자의 개인정보 보호를 최우선으로 생각합니다. 본 앱은 사용자의 어떠한 개인식별정보도 수집하거나 전송하지 않는 <strong>프라이버시 중심의 독립 실행형 앱</strong>입니다.</p>
+    <p>Study Timer(이하 "앱")는 사용자의 개인정보 보호를 최우선으로 생각합니다. 앱은 어떠한 개인식별정보도 수집하거나 전송하지 않으며, 광고 게재를 위해 Google AdMob을 사용합니다.</p>
     <div class="highlight">
-      이 앱은 외부 서버로 어떠한 개인정보도 전송하지 않습니다. 모든 데이터는 오직 사용자의 기기 내 로컬 저장소에만 보관됩니다.
+      앱이 생성하는 타이머 기록 및 설정 데이터는 외부 서버로 전송되지 않으며, 오직 사용자의 기기 내 로컬 저장소에만 보관됩니다.
     </div>
   </div>
 
   <div class="section">
     <h2>2. 개인정보 수집 및 방법</h2>
-    <p>본 앱은 회원가입 절차가 없으며, 광고 및 타사 분석 도구(SDK)를 포함하고 있지 않습니다.</p>
+    <p>본 앱은 회원가입 절차가 없으며, 앱 자체적으로는 개인정보를 수집하지 않습니다. 단, 광고 게재를 위해 Google AdMob SDK가 포함되어 있으며, AdMob은 광고 제공 목적으로 다음 정보를 수집할 수 있습니다.</p>
     <ul>
-      <li><strong>수집하는 개인정보:</strong> 없음</li>
-      <li><strong>자동으로 수집되는 정보:</strong> 없음 (광고 ID, 기기 식별자 등을 수집하지 않음)</li>
+      <li><strong>앱이 직접 수집하는 개인정보:</strong> 없음</li>
+      <li><strong>AdMob이 수집할 수 있는 정보:</strong>
+        <ul style="margin-top:6px;">
+          <li>기기 식별자 (IDFA / 광고 ID)</li>
+          <li>IP 주소 및 대략적인 위치 정보</li>
+          <li>앱 사용 및 상호작용 데이터</li>
+          <li>기기 유형, OS 버전, 언어 설정</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>3. 데이터의 보관 및 파기</h2>
+    <h2>3. 광고 (Google AdMob)</h2>
+    <p>본 앱은 배너 광고 게재를 위해 <strong>Google AdMob</strong>을 사용합니다. AdMob이 수집하는 데이터는 <a href="https://policies.google.com/privacy" target="_blank">Google 개인정보처리방침</a>에 따라 Google LLC가 처리합니다.</p>
+    <p>맞춤 광고 수신을 원하지 않으시면 <strong>iOS 설정 → 개인 정보 보호 및 보안 → Apple 광고</strong>에서 맞춤형 광고를 끄실 수 있습니다.</p>
+    <p>본 앱은 Apple의 <strong>앱 추적 투명성(ATT)</strong> 프레임워크를 준수하며, 필요한 경우 광고 ID 사용 전 사용자의 동의를 요청합니다.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. 데이터의 보관 및 파기</h2>
     <p>앱 사용 중에 발생하는 모든 데이터(타이머 기록, 설정 등)는 오직 사용자의 기기에만 저장됩니다. 개발자는 이 데이터에 접근할 수 없으며, 사용자가 <strong>앱을 삭제할 경우 기기 내의 모든 데이터는 즉시 함께 파기</strong>됩니다.</p>
   </div>
 
   <div class="section">
-    <h2>4. 제3자 제공 및 위탁</h2>
-    <p>본 앱은 광고를 포함하지 않으며, 어떠한 사용자 데이터도 제3자에게 공유, 판매 또는 제공하지 않습니다.</p>
+    <h2>5. 제3자 제공 및 위탁</h2>
+    <p>앱은 사용자의 습관·타이머 데이터를 제3자에게 공유하거나 판매하지 않습니다. 다만 Google AdMob은 광고 서비스 제공을 위해 수집한 데이터를 자체 정책에 따라 처리합니다. AdMob이 게재하는 광고에는 제3자 웹사이트 링크가 포함될 수 있으며, 해당 제3자의 개인정보 처리에 대해 책임지지 않습니다.</p>
   </div>
 
   <div class="section">
-    <h2>5. 아동 개인정보 보호</h2>
-    <p>본 앱은 모든 연령층이 사용할 수 있으며, 개인정보를 수집하지 않으므로 만 13세 미만 아동의 개인정보를 수집할 위험이 없습니다.</p>
+    <h2>6. 아동 개인정보 보호</h2>
+    <p>본 앱은 만 13세 미만 아동을 주요 대상으로 하지 않습니다. 앱 자체적으로는 개인정보를 수집하지 않으며, 만 13세 미만이 사용하는 환경에서는 비맞춤형 광고만 게재되도록 AdMob을 설정합니다.</p>
   </div>
 
   <div class="contact-box">
@@ -145,39 +160,54 @@
   </div>
 </div>
 
+<!-- ── ENGLISH ── -->
 <div id="content-en" class="container hidden">
-  <p class="updated">Last updated: April 2026</p>
+  <p class="updated">Last updated: May 2026</p>
 
   <div class="section">
     <h2>1. Overview</h2>
-    <p>Study Timer ("the App") is committed to protecting your privacy. This App is a <strong>privacy-focused, standalone application</strong> that does not collect or transmit any personally identifiable information.</p>
+    <p>Study Timer ("the App") is committed to protecting your privacy. The App does not collect or transmit any personally identifiable information. Banner advertisements are served through Google AdMob.</p>
     <div class="highlight">
-      This app does NOT transmit any personal data to any external server. All information is stored locally on your device only.
+      Timer records and settings data are never transmitted to any external server — they are stored locally on your device only.
     </div>
   </div>
 
   <div class="section">
     <h2>2. Data Collection</h2>
-    <p>The App does not require registration and does not include any advertisements or third-party tracking SDKs.</p>
+    <p>The App does not require registration and does not collect personal data on its own. However, the Google AdMob SDK is integrated for advertising purposes and may collect the following information:</p>
     <ul>
-      <li><strong>Personal Data Collected:</strong> None</li>
-      <li><strong>Automatically Collected Data:</strong> None (No Advertising ID or Device Identifier collection)</li>
+      <li><strong>Personal Data Collected by the App:</strong> None</li>
+      <li><strong>Data AdMob May Collect:</strong>
+        <ul style="margin-top:6px;">
+          <li>Device identifiers (IDFA / Advertising ID)</li>
+          <li>IP address and general location</li>
+          <li>App usage and interaction data</li>
+          <li>Device type, OS version, and language settings</li>
+        </ul>
+      </li>
     </ul>
   </div>
 
   <div class="section">
-    <h2>3. Data Retention & Deletion</h2>
+    <h2>3. Advertising (Google AdMob)</h2>
+    <p>The App uses <strong>Google AdMob</strong> to display banner advertisements. Data collected by AdMob is processed by Google LLC in accordance with <a href="https://policies.google.com/privacy" target="_blank">Google's Privacy Policy</a>.</p>
+    <p>You can opt out of personalized ads at any time via <strong>iOS Settings → Privacy &amp; Security → Apple Advertising</strong> and disabling personalized ads.</p>
+    <p>The App complies with Apple's <strong>App Tracking Transparency (ATT)</strong> framework. Where required, the App will request your permission before AdMob uses your Advertising ID for personalized ads.</p>
+  </div>
+
+  <div class="section">
+    <h2>4. Data Retention &amp; Deletion</h2>
     <p>All data generated during usage (timer logs, settings, etc.) is stored exclusively on your local device. The developer has no access to this data. <strong>When you uninstall the App, all locally stored data is permanently deleted.</strong></p>
   </div>
 
   <div class="section">
-    <h2>4. Third-Party Sharing</h2>
-    <p>The App does not contain advertisements and does not sell, share, or rent any user data to third parties.</p>
+    <h2>5. Third-Party Sharing</h2>
+    <p>The App does not sell or share your timer or usage data with any third parties. Google AdMob processes the data it collects according to its own policies. Ads served by AdMob may contain links to third-party websites; we are not responsible for the privacy practices of those third parties.</p>
   </div>
 
   <div class="section">
-    <h2>5. Children's Privacy</h2>
-    <p>The App is suitable for all ages. Since we do not collect any personal information, there is no risk of collecting data from children under the age of 13.</p>
+    <h2>6. Children's Privacy</h2>
+    <p>The App is not primarily directed at children under 13. The App itself collects no personal data. In contexts where users may be under 13, AdMob is configured to serve non-personalized ads only.</p>
   </div>
 
   <div class="contact-box">
